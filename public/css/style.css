@@ -1,10 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
 }
 
 /** Header Start*/
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -17,7 +21,6 @@ nav {
 nav img {
     height: 50px;
     width: 50px;
-    padding: 20px;
     cursor: pointer;
 }
 
@@ -25,10 +28,34 @@ nav img {
     display: none;
 }
 
-nav .items ul{
+nav .items ul {
     display: flex;
     padding: 20px;
-    gap:20px;
+    gap: 20px;
+    position: relative; /* Set position relative for the parent */
+}
+
+nav ul li {
+    position: relative; /* Set position relative for each list item */
+}
+
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the parent */
+    left: 0;
+    background-color: black; /* bg color of services*/
+    box-shadow: 0 2px 5px white(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 130px;
+}
+
+nav ul li .dropdown-menu.show {
+    display: block; /* Show dropdown menu */
+}
+
+nav ul li .dropdown-menu a {
+    color: #fff;
 }
 
 nav ul li a {
@@ -44,7 +71,6 @@ nav ul li a i {
 
 nav ul li a:hover, nav ul li a i:hover {
     color: grey;
-    /* color: blueviolet; */
 }
 
 /** Header End*/
@@ -58,4 +84,64 @@ nav ul li a:hover, nav ul li a i:hover {
 
 .first-row h1 {
     position: relative;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    height: 60vh;
+}
+
+footer .footer-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+footer .footer-items img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.footer-items .links {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 20px;
+}
+
+.footer-items .links ul li, .footer-items .links ul li a i {
+    padding: 10px;
+}
+
+.footer-items .links ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+footer .copy-items {
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+footer .copy-items .line{
+    background-color: white;
+    width: 100%;
+    height: 1px;
+}
+
+footer .copy-items .copy{
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
 }

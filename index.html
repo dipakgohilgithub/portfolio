@@ -8,51 +8,82 @@
     <link rel="stylesheet" href="public/font_awesome/css/all.css">
 </head>
 <body>
+    
+<nav>
+    <div class="logo">
+        <img id="logo" src="public/images/logo.png" alt="">
+        <img class="hidden" id="hiddenImg" src="public/images/like.webp" alt="">
+    </div>
+    <div class="items">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Articles</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Services</a>
+                <ul class="dropdown-menu" id="servicesDropdown">
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">Laravel</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">JQuery</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+        </ul>
+    </div>
+</nav>
 
-    <nav>
-        <div class="logo">
-            <img id="logo" src="public/images/logo.png" alt=""> 
-            <img class="hidden" id="hiddenImg" src="public/images/like.webp" alt=""> 
+<div class="container">
+    <div class="first-row">
+        <img src="public/images/php-bg.png" alt="">
+        <!-- <h1>Hello Dipak Gohil</h1> -->
+    </div>  
+</div>
+
+<footer>
+    <div class="footer-items">
+        <div class="footer-img">
+            <img src="public/images/deep.jpg" alt="">
         </div>
-        <div class="items">
+        <div class="links">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Articles</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Services<i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Service 1</a></li>
-                        <li><a href="#">Service 2</a></li>
-                        <li><a href="#">Service 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-chevron-right"></i>PHP</a></li>
+                <li><a href="#"><i class="fa-solid fa-chevron-right"></i>Laravel</a></li>
+                <li><a href="#"><i class="fa-solid fa-chevron-right"></i>JavaScript</a></li>
+                <li><a href="#"><i class="fa-solid fa-chevron-right"></i>JQuery</a></li>
             </ul>
         </div>
-    </nav>
-
-    <div class="container">
-        <div class="first-row">
-            <img src="public/images/php-bg.png" alt="">
-            <h1>Hello Dipak Gohil</h1>
+    </div>
+    <div class="copy-items">
+        <div class="line"></div>
+        <div class="copy">
+            &#169; Copyright 2024 By Dipak Gohil
         </div>
     </div>
+</footer>
 
-    <script>
-         document.addEventListener('DOMContentLoaded', function() {
-        var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the dropdown toggle
+        var servicesToggle = document.querySelector('.dropdown-toggle');
+        // Get the dropdown menu
+        var servicesMenu = document.getElementById('servicesDropdown');
 
-        dropdownToggles.forEach(function(toggle) {
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                var dropdownMenu = this.nextElementSibling;
-                dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
-            });
+        // Toggle the visibility of the dropdown menu on click
+        servicesToggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            servicesMenu.classList.toggle('show');
+        });
+
+        // Close the dropdown menu when clicking outside of it
+        window.addEventListener('click', function (e) {
+            if (!servicesMenu.contains(e.target) && !servicesToggle.contains(e.target)) {
+                servicesMenu.classList.remove('show');
+            }
         });
     });
-    </script>
+</script>
 
 </body>
 </html>
