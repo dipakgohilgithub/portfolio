@@ -18,13 +18,41 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Articles</a></li>
-                <li><a href="#">Coding</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Services<i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Service 2</a></li>
+                        <li><a href="#">Service 3</a></li>
+                    </ul>
+                </li>
                 <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
             </ul>
         </div>
     </nav>
+
+    <div class="container">
+        <div class="first-row">
+            <img src="public/images/php-bg.png" alt="">
+            <h1>Hello Dipak Gohil</h1>
+        </div>
+    </div>
+
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+        var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        dropdownToggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                var dropdownMenu = this.nextElementSibling;
+                dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    });
+    </script>
 
 </body>
 </html>
