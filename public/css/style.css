@@ -34,7 +34,8 @@
 }
 
 .logo img {
-    height: auto;
+    height: 50px;
+    width: 100px;
 }
 
 /*==========navbar==========*/
@@ -765,6 +766,12 @@ img {
 
 .head {
     font-weight: 600;
+}
+
+
+.comp_logo {
+    height: 100px;
+    width: 100px;
 }
 
 @keyframes slideRight {
