@@ -167,7 +167,6 @@
 .wra {
     display: inline-flex;
     cursor: pointer;
-
 }
 
 .wra .icon {
@@ -911,15 +910,22 @@ hr {
         flex-wrap: wrap;
     }
 
-
-
     .about .about-text {
         margin: 30px;
         text-align: center;
     }
 
-    .see .tabs li {
-        margin-left: 25px;
+    .see {
+        width: 100%;
+    }
+
+    .home-content p {
+        width: 80%;
+    }
+
+    .wra {
+        margin-left: -30px;
+        margin-bottom: 50px;
     }
 }
 
