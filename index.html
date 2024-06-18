@@ -291,5 +291,39 @@
     <script>
         AOS.init();
     </script>
+    <script>
+        // stop right click
+        document.addEventListener("contextmenu", function (e){
+            e.preventDefault();
+        }, false);
+    </script>
+    <script>
+        // stop cntr+u (for view page source code)
+        document.onkeydown = function(e) {
+                if (e.ctrlKey && 
+                    (e.keyCode === 85 )) {
+                    return false;
+                }
+        };
+    </script>   
+    <script>
+        // stop cntr+shift+i (for mobile screen)
+        window.onload = function() {
+            window.document.body.onkeydown = function() {
+                if (event.ctrlKey) {
+                    event.stopPropagation();
+                    event.preventDefault();
+                    try {
+                        event.keyCode = 0;
+                    }
+                    catch (event) {
+
+                    }
+                    return false;
+                }
+                return true;
+            }
+        }
+    </script>
 </body>
 </html>
