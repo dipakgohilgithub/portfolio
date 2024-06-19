@@ -1,65 +1,94 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../public/css/coding_page.css">
-    <link rel="stylesheet" href="../public/font_awesome/css/all.css">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <div class="main-body">
-        <span class="header-wrapper">
-            <h1>Databse Connection File</h1>
-            <div class="copy-btn" onclick="copyCode()"><i class="fa-regular fa-copy"></i>Copy</div>
-        </span>
-        <ul>
-            <li>Step 1 : Open Xampp Server</li>
-            <li>Step 2 : Open Project Folder ... <span class="note"> Note ('make sure server is on') </span> </li>
-            <li>Step 1 : Open Xampp Server</li>
-            <li>Step 1 : Open Xampp Server</li>
-        </ul>
-        <code>
-            <pre id="codeSnippet">
-                class DBConnectionService {
-                    private $host;
-                    private $userName;
-                    private $password;
-                    private $db;
-                    
-                    function __contruct() {
-                        $this->conn = mysqli_connect($this->host, $this->userNAme, $this->password, $this->db);
-                    }
 
-                    function getConnection () {
-                        if(!$this->con) {
-                            return NULL;
-                        } else {
-                            return $this->con;
-                        }
-                    }
-                }
-            </pre>  
-        </code>
+<body class="body">
+    <header class="header">
+        <div class="logo">
+            <img src="../public/images/personal/php_icon.png">
+        </div>
+        <div class="navbar">
+            <a href="#" style="--1:1" class="active">Home</a>
+            <a href="code/dashboard.html">Coding's</a>
+            <a href="#about-me" style="--1:2">About Me</a>
+            <a href="#see1" style="--1:3">Skills</a>
+            <a href="#project" style="--1:4">My Work</a>
+            <a href="#contrct" style="--1:6">Contact Me</a>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="nav-close">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#"><img src="../public/images/personal/php_icon.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#see1">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project">My Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contrct">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="title">Industrial Standard</div>
+            <div class="name">These guidelines are in place to maintain a standard of safety in our work environment. These guidelines are in place to maintain a standard of safety in our work environment.</div>
+            <button onclick="location.href='industry_standards.html';">Read</button>
+        </div>
+
+        <div class="card">
+            <div class="title">Database Connection </div>
+            <div class="name">Validation for Database Connection.</div>
+            <button onclick="location.href='database.html';">Read</button>
+        </div>
+
+        <div class="card">
+            <div>
+                
+            </div>
+            <div class="title">Laravel Basics </div>
+            <div class="name">Validation for Database Connection.</div> 
+            <button onclick="location.href='laravel_basics.html';">Read</button>
+        </div>
+
     </div>
-
-    <div class="main-body">
-        <span class="header-wrapper">
-            <h1>Databse Connection File</h1>
-            <div class="copy-btn" onclick="copyCode()"><i class="fa-regular fa-copy"></i>Copy</div>
-        </span>
-        <code>
-            <pre id="codeSnippet">
-                class DatabseConnection {
-                    private $host;
-                    private $username;
-                    private $password;
-                    private $db;
-                }
-            </pre>  
-        </code>
-    </div>
-
-<script src="../public/js/CopyClipBord.js"></script>
-</body>
-</html>
+    </body>
+    </html>

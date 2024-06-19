@@ -24,6 +24,13 @@
     color: red;
 }
 
+.highlight {
+    color: yellow;
+}
+.code {
+    color: rgb(247, 115, 8);
+}
+
 ul li {
     color: rgb(159, 159, 213);
     font-size: 18px;

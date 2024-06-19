@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/coding_page.css">
+    <link rel="stylesheet" href="../public/font_awesome/css/all.css">
+</head>
+<body>
+    <div class="main-body">
+        <span class="header-wrapper">
+            <h1>Databse Connection File</h1>
+            <div class="copy-btn" onclick="copyCode()"><i class="fa-regular fa-copy"></i>Copy</div>
+        </span>
+        <ul>
+            <li>Step 1 : create Services Folder </li>
+            <li>Step 1 : save file name as java class example : <span class="highlight"> ExamplClass.php </span></li>
+            <li>Step 2 : give class name as file name  ..<span class="note"> class ExamplClass { Inside Code } </span> </li>
+            <li>Step 1 : main page to link this : <span class="code"> &lt? php include_once('ExamplClass.php'); ?> </span></li>
+            <li>Step 1 : Open Xampp Server</li>
+        </ul>
+        <code>
+            <!-- insde span tag used color 
+                 highlight -> yellow color, 
+                 note -> red color,
+                 code -> orange color -->
+
+            <pre id="codeSnippet">
+                class DBConnectionService {
+                    private $host;
+                    private $userName;
+                    private $password;
+                    private $db;
+                    
+                    function __contruct() {
+                        $this->con = mysqli_connect($this->host, $this->userName, $this->password, $this->db);
+                    }
+
+                    function getConnection () {
+                        if(!$this->con) {
+                            return NULL;
+                        } else {
+                            return $this->con;
+                        }
+                    }
+                }
+            </pre>  
+        </code>
+    </div>
+
+<script src="../public/js/CopyClipBord.js"></script>
+</body>
+</html>
