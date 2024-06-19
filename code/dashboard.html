@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="coding/public/css/style.css">
-    <link rel="stylesheet" href="coding/public/font_awesome/css/all.css">
+    <link rel="stylesheet" href="../public/css/coding_page.css">
+    <link rel="stylesheet" href="../public/font_awesome/css/all.css">
 </head>
 <body>
     <div class="main-body">
@@ -21,17 +21,17 @@
         </ul>
         <code>
             <pre id="codeSnippet">
-                class DatabseConnection {
+                class DBConnectionService {
                     private $host;
                     private $userName;
                     private $password;
                     private $db;
                     
                     function __contruct() {
-                        $this->conn = mysqli_connection($this->host, $this->userNAme, $this->password, $this->db);
+                        $this->conn = mysqli_connect($this->host, $this->userNAme, $this->password, $this->db);
                     }
 
-                    public function getConnection ($this->con) {
+                    function getConnection () {
                         if(!$this->con) {
                             return NULL;
                         } else {
@@ -60,6 +60,6 @@
         </code>
     </div>
 
-<script src="coding/public/js/CopyClipBord.js"></script>
+<script src="../public/js/CopyClipBord.js"></script>
 </body>
 </html>
