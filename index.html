@@ -37,7 +37,6 @@
             <a href="#contrct" style="--1:6">Contact Me</a>
         </div>
     </header>
-
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="nav-close">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="#"><img src="public/images/personal/php_icon.png" alt=""></a>
@@ -48,6 +47,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="code/dashboard.html">Coding's</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about-me">About Me</a>
@@ -248,67 +250,70 @@
     </section>
     <hr>
 
-    <div class="contactme" id="contrct">
-        <h1 data-aos="fade-left">Contact <span>Me</span><i class="fa-solid fa-handshake"></i></h1>
-        <div class="socialmedia" data-aos="fade-up">
-            <a target="_blank" href="https://www.linkedin.com/in/dipak-gohil-828242270">
-                <div class="media">
-
-                    <p><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
-                </div>
-            </a>
-            <a target="_blank" href="https://github.com/dipakgohilgithub">
-                <div class="media">
-
-                    <p><i class="fa-brands fa-github"></i> GitHub</p>
-                </div>
-            </a>
-            <a target="_blank" href="https://www.instagram.com/dipakgohil07">
-                <div class="media">
-
-                    <p><i class="fa-brands fa-instagram"></i> Instagram</p>
-                </div>
-            </a>
-            <a target="_blank" href="mailto:dipakgohil7273@gmail.com   ">
-                <div class="media">
-
-                    <p><i class="fa-regular fa-envelope"></i> Gmail</p>
-                </div>
-                <a href="tel:7878739362">
+    <footer>
+        <div class="contactme" id="contrct">
+            <h1 data-aos="fade-left">Contact <span>Me</span><i class="fa-solid fa-handshake"></i></h1>
+            <div class="socialmedia" data-aos="fade-up">
+                <a target="_blank" href="https://www.linkedin.com/in/dipak-gohil-828242270">
                     <div class="media">
-                        <p><i class="fa-solid fa-phone"></i> Conatact</p>
+    
+                        <p><i class="fa-brands fa-linkedin"></i> LinkedIn </p>
                     </div>
                 </a>
-            </a>
+                <a target="_blank" href="https://github.com/dipakgohilgithub">
+                    <div class="media">
+    
+                        <p><i class="fa-brands fa-github"></i> GitHub </p>
+                    </div>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/dipakgohil07">
+                    <div class="media">
+    
+                        <p><i class="fa-brands fa-instagram"></i> Instagram </p>
+                    </div>
+                </a>
+                <a target="_blank" href="mailto:dipakgohil7273@gmail.com">
+                    <div class="media">
+    
+                        <p><i class="fa-regular fa-envelope"></i> Gmail </p>
+                    </div>
+                    <a href="tel:7878739362">
+                        <div class="media">
+                            <p><i class="fa-solid fa-phone"></i> Conatact </p>
+                        </div>
+                    </a>
+                </a>
+            </div>
+            <hr>
+            <div class="footer">
+                <div class="ty">Thank You For Visit &#128522;</div>
+                <div class="con"> ~ Dipak Gohil</div>
+            </div>
         </div>
-        <hr>
-        <div class="footer">
-            <div class="ty">Thank You For Visit &#128522;</div>
-            <div class="con"> ~ Dipak Gohil</div>
-        </div>
+    </footer>
 
-    </div>
     <script src="public/js/TextChanges.js"></script>
     <script>
         AOS.init();
     </script>
+    <!-- // stop RIGHT CLICK  -->
     <script>
-        // stop right click
+   
         document.addEventListener("contextmenu", function (e){
             e.preventDefault();
         }, false);
     </script>
+    <!-- // stop CTRL + U (for view page source code) -->
     <script>
-        // stop cntr+u (for view page source code)
         document.onkeydown = function(e) {
-                if (e.ctrlKey && 
-                    (e.keyCode === 85 )) {
-                    return false;
-                }
+            if (e.ctrlKey && 
+                (e.keyCode === 85 )) {
+                return false;
+            }
         };
-    </script>   
+    </script> 
+<!-- // stop CTRL + SHIFT + I (for mobile screen) -->
     <script>
-        // stop cntr+shift+i (for mobile screen)
         window.onload = function() {
             window.document.body.onkeydown = function() {
                 if (event.ctrlKey) {
