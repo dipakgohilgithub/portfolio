@@ -53,17 +53,18 @@ ul li {
 }
 
 code {
-    display: block;
-    white-space: pre-wrap;
+    display: flex;
     font-family: Consolas, Monaco, 'Courier New', Courier, monospace;
     font-size: 20px;
-    margin-top: 10px;
     border: 1px solid #ccc;
-    padding: 20px;
     border-radius: 4px;
-    width: 95%;
+    width: 100%;
 }
 
+pre {
+    white-space: pre-wrap;
+    width: 100%;
+}
 
 @media only screen and (max-width: 600px) {
     .header-wrapper h1 {

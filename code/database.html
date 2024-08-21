@@ -15,11 +15,11 @@
             <div class="copy-btn" onclick="copyCode()"><i class="fa-regular fa-copy"></i>Copy</div>
         </span>
         <ul>
-            <li>Step 1 : create Services Folder </li>
-            <li>Step 1 : save file name as java class example : <span class="highlight"> ExamplClass.php </span></li>
-            <li>Step 2 : give class name as file name  ..<span class="note"> class ExamplClass { Inside Code } </span> </li>
-            <li>Step 1 : main page to link this : <span class="code"> &lt? php include_once('ExamplClass.php'); ?> </span></li>
-            <li>Step 1 : Open Xampp Server</li>
+            <li>Step 1 : create services Folder </li>
+            <li>Step 2 : save file name as java class example : <span class="highlight"> DBConnection.php </span></li>
+            <li>Step 3 : give class name as file name  ..<span class="note"> class DBConnection { Inside Code } </span> </li>
+            <li>Step 4 : main page to link this : <span class="code"> &lt? php include_once('DBConnection.php'); ?> </span></li>
+            <li>Step 5 : Open Xampp Server</li>
         </ul>
         <code>
             <!-- insde span tag used color 
@@ -29,10 +29,11 @@
 
             <pre id="codeSnippet">
                 class DBConnectionService {
-                    private $host;
-                    private $userName;
-                    private $password;
-                    private $db;
+                    private $host = "localhost";
+                    private $userName = "root";
+                    private $password = "";
+                    private $db = "db_name";
+                    private $con;
                     
                     function __contruct() {
                         $this->con = mysqli_connect($this->host, $this->userName, $this->password, $this->db);
