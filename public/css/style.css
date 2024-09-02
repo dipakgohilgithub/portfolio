@@ -1001,4 +1001,12 @@ hr {
     #nav-close{
         display: block;
     }
+    .container  {
+        display: flex;
+        flex-direction: column;
+    }
+    .container .card {
+        width: 100%;
+        margin-left: 0px;
+    }
 }
