@@ -941,6 +941,17 @@ hr {
 
 /** database page ui end*/
 
+/* error dashboard page ui  */
+
+.solution {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin: px;
+}
+
+/* error dashboard page ui  */
+
 /* ---------------responsive---------------- */
 @media(max-width:1075px) {
     .home {
