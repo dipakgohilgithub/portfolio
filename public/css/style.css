@@ -520,7 +520,6 @@ span {
 .container1 {
     width: auto;
     height: 300px;
-
     padding: 7px 50px;
     margin-left: 120px;
 
@@ -888,15 +887,16 @@ hr {
 /** database page ui start*/
 
 .container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 .card {
-
+    display: flex !important;
+    justify-content: space-between;
     padding: 30px;
     margin: 20px;
     gap: 20px;
-    width: 50%;
+    width: 80%;
     border-radius: 10px;
 }
 
@@ -906,7 +906,6 @@ hr {
     border-bottom: 1px solid #7c05eb;
     border-radius: 5px;
     font-size: 18px;
-    margin-bottom: 10px; 
     padding-bottom: 10px;
 }
 
@@ -914,7 +913,6 @@ hr {
     font-size: 20px;
 }
 .card button {
-    float: inline-end;
     border-radius: 5px;
     background-color: green;
     color: white;
@@ -925,6 +923,20 @@ hr {
 .card button:hover {
     background-color: rgb(2, 75, 2);    
 }
+
+
+/* important-links page css  */
+
+
+.container_s3 .items-list {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+/* important-links page css  */
 
 
 /** database page ui end*/
