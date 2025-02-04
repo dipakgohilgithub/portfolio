@@ -1,6 +1,6 @@
 
 var typed = new Typed(".text", {
-    strings: ["Full Stack Developer", "Web Developer", "PHP Developer"],
+    strings: ["Full Stack Developer", "PHP - LARAVEL Developer", "Backend Developer", "Web Developer"],
     typespeed: 80,
     backspeed: 80,
     backDelay: 1000,
@@ -9,7 +9,6 @@ var typed = new Typed(".text", {
 
 
 // animation tab
-
 
 const tabs = document.querySelectorAll(".tabs li");
 const contents = document.querySelectorAll(".content");
@@ -38,4 +37,6 @@ const button = document.querySelector('button');
 button.addEventListener('click', () => {
     button.classList.add('active');
 });
- 
+
+//  show and hide images of about me and prjects
+AOS.init();
