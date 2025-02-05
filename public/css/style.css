@@ -65,6 +65,15 @@
     margin: 5px;
 }
 
+.title {
+    color: #7c05eb;
+    text-align: center;
+    border-bottom: 1px solid #7c05eb;
+    border-radius: 5px;
+    /* font-size: 18px; */
+    padding-bottom: 10px;
+}
+
 /*==========home page===========*/
 .image {
     width: 100%;
@@ -813,10 +822,13 @@ hr {
 
 /** database page ui start*/
 
-.container {
+
+.maincartbody {
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    width: 300%;
 }
+
 .card {
     display: flex !important;
     justify-content: space-between;
@@ -825,15 +837,6 @@ hr {
     gap: 20px;
     width: 80%;
     border-radius: 10px;
-}
-
-.card .title {
-    color: #7c05eb;
-    text-align: center;
-    border-bottom: 1px solid #7c05eb;
-    border-radius: 5px;
-    font-size: 18px;
-    padding-bottom: 10px;
 }
 
 .card .name {
@@ -879,7 +882,15 @@ hr {
 
 /* error dashboard page ui  */
 
-/* ---------------responsive---------------- */
+
+.main-body-cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2%;
+}
+
+/* ----------------------------  responsive  ------------------------------ */
 @media(max-width:1075px) {
     .home {
         display: flex;
