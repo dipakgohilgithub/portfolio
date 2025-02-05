@@ -39,6 +39,7 @@
 }
 
 /*==========navbar==========*/
+
 .navbar a {
     display: inline-block;
     font-size: 25px;
@@ -63,9 +64,6 @@
     cursor: pointer;
     margin: 5px;
 }
-
-
-
 
 /*==========home page===========*/
 .image {
