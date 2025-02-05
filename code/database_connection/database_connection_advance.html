@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfolio</title>
+        <link rel="stylesheet" href="../../public/css/style.css">
+        <link rel="stylesheet" href="../../public/css/coding_page.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <link rel="stylesheet" href="../../public/font_awesome/css/all.css">
+    
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+<body class="body">
+
+    <header class="header">
+        <div class="logo">
+            <a href="../../index.html"><img src="../../public/images/personal/php_icon.png"></a>
+        </div>
+        <div class="navbar">
+            <a href="../../index.html" style="--1:1" class="active">Home</a>
+            <a href="../dashboard.html">Coding's</a>
+            <a href="../../index.html" style="--1:2">About Me</a>
+            <a href="../../index.html" style="--1:3">Skills</a>
+            <a href="../../index.html" style="--1:4">My Work</a>
+            <a href="../../index.html" style="--1:6">Contact Me</a>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="nav-close">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#"><img src="../../public/images/personal/php_icon.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../dashboard.html">Coding's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">My Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="main-body">
+            <span class="header-wrapper">
+                <h1>Databse Connection Advance</h1>
+                <div class="copy-btn" onclick="copyCode()"><i class="fa-regular fa-copy"></i>Copy</div>
+            </span>
+            <ul>
+                <li>Step 1 : create services Folder </li>
+                <li>Step 2 : save file name as java class example : <span class="highlight"> DBConnection.php </span></li>
+                <li>Step 3 : give class name as file name  ..<span class="note"> class DBConnection { Inside Code } </span> </li>
+                <li>Step 4 : main page to link this : <span class="code"> &lt? php include_once('DBConnection.php'); ?> </span></li>
+                <li>Step 5 : Open Xampp Server</li>
+            </ul>
+            <code>
+                <!-- insde span tag used color 
+                    highlight -> yellow color, 
+                    note -> red color,
+                    code -> orange color -->
+
+                <pre id="codeSnippet">
+                    require_once("Logs.php");
+                    require_once("UtilityService.php");
+
+                    defined('env') or define("env", "LOCAL");
+
+                    if (env == "LOCAL") {
+                        define("HOST", "localhost");
+                        define("USERNAME", "root");
+                        define("PASSWORD", "");
+                        define("DBNAME", "trulloy_management");
+                    } else if (env == "PROD") {
+                        define("HOST", "localhost");
+                        define("USERNAME", "tr_super_user");
+                        define("PASSWORD", "trulloy@2024");
+                        define("DBNAME", "trulloy_management");
+                    }
+
+                    class DBConnectionService {
+
+                        private $con = null;
+
+                        function __construct() {
+                            // $this->con = mysqli_connect(DBConnectionService::$host, DBConnectionService::$username, DBConnectionService::$password, DBConnectionService::$dbname);
+                            $this->con = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME);
+                            if (mysqli_connect_errno()) {
+                                $this->con = null;
+                            } else {
+                                $this->updateCount(1);
+                                $updateSql = "update connection_count set created = (created + 1) where id = 1";
+                                mysqli_query($this->con, $updateSql);
+                            }
+                        }
+                        
+                        function getConnection() {
+                            if (!$this->con) {
+                                return null;
+                            } else {
+                                return $this->con;
+                            }
+                        }
+
+                        function __destruct() {
+                            if ($this->con != null) {
+                                $updateSql = "update connection_count set destroyed = (destroyed + 1) where id = 1";
+                                mysqli_query($this->con, $updateSql);
+                                $this->updateCount(2);
+                                mysqli_close($this->con);
+                            }
+                        }
+
+                        function exec($sql) {
+                            $updateSql = "update connection_count set query = (query + 1) where id = 1";
+                            mysqli_query($this->con, $updateSql);
+                            $result = mysqli_query($this->con, $sql);
+                            $this->updateCount(3);
+                            return $result;
+                        }
+
+                        function updateCount($type) {
+                            // $json = file_get_contents('count.db.json');
+                            $json = file_get_contents(UtilityService::getBaseDirectory() . '/services/count.db.json');
+                            $val = json_decode($json, true);
+                            $create = $val["created"];
+                            $destroy = $val["destroyed"];
+                            $query = $val["query"];
+                            if ($type == 1) {
+                                $create = $val["created"] + 1;
+                            } else if ($type == 2) {
+                                $destroy = $val["destroyed"] + 1;
+                            } else {
+                                $query = $val["query"] + 1;
+                            }
+                            // $cb = fopen('count.db.json', 'w');
+                            Logs::debug("DBConnection Service - " . UtilityService::getBaseDirectory() . '/services/count.db.json');
+
+                            // $cb = fopen(UtilityService::getBaseDirectory() . '/services/count.db.json', 'w');
+                            // fwrite($cb, '{"created":'.$create.',"destroyed":'.$destroy.',"query":'.$query.'}');
+                            // fclose($cb);
+                        }
+                    }
+                </pre>  
+            </code>
+        </div>
+    </section>
+
+    <!---------------------- footer start ---------------------------------->
+    <footer class="bg-black text-light">
+        <div class="contactme" id="contrct">
+            <h1 data-aos="fade-left">Contact <span>Me</span><i class="fa-solid fa-handshake"></i></h1>
+            <div class="socialmedia" data-aos="fade-up">
+                <a target="_blank" href="https://www.linkedin.com/in/dipak-gohil-828242270">
+                    <div class="media">
+    
+                        <p><i class="fa-brands fa-linkedin"></i> LinkedIn </p>
+                    </div>
+                </a>
+                <a target="_blank" href="https://github.com/dipakgohilgithub">
+                    <div class="media">
+    
+                        <p><i class="fa-brands fa-github"></i> GitHub </p>
+                    </div>
+                </a>
+                <a target="_blank" href="mailto:dipakgohil7273@gmail.com">
+                    <div class="media">
+    
+                        <p><i class="fa-regular fa-envelope"></i> Gmail </p>
+                    </div>
+                    <a href="tel:7878739362">
+                        <div class="media">
+                            <p><i class="fa-solid fa-phone"></i> Conatact </p>
+                        </div>
+                    </a>
+                </a>
+            </div>
+            <hr>
+            <div class="footer">
+                <div class="ty">Thank You For Visit &#128522;</div>
+                <div class="con"> ~ Dipak Gohil</div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../public/js/CopyClipBord.js"></script>
+
+    <!---------------------- footer end ---------------------------------->
+</body>
+</html>
