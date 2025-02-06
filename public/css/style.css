@@ -872,6 +872,9 @@ hr {
 
 /* important-links page css  */
 
+.dash_main_body {
+    padding-top: 80px;
+}
 
 /** database page ui end*/
 
@@ -965,5 +968,14 @@ hr {
     .container .card {
         width: 100%;
         margin-left: 0px;
+    }
+
+    .dash_main_body {
+        padding-top: 0px;
+    }
+
+    .maincartbody {
+        display: flex;
+        flex-direction: column;
     }
 }
