@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>portfolio</title>
         <link rel="stylesheet" href="../../public/css/style.css">
+        <link rel="stylesheet" href="../../public/css/coding_page.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         <link rel="stylesheet" href="../../public/font_awesome/css/all.css">
@@ -64,35 +65,57 @@
     <section class="home">
         <div class="container">
             <div class="row col-lg-12">
-                <h1 class="title">Important Links</h1>
+                <h1 class="title">Laravel Installation</h1>
             </div>
-            <div class="row col-lg-12">
-                <table class="table table-striped">
-                    <thead>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> PHP Older Version Download Links </td>
-                            <td><a class="btn btn-primary" href="https://windows.php.net/downloads/releases/archives/">Click Here</button></td>
-                        </tr>
-                        <tr>
-                            <td>Laravel Industry Standards</td>
-                            <td><button class="btn btn-primary" onclick="location.href='laravel_standard.html'">Read</button></td>
-                        </tr>
-                        <tr>
-                            <td>Android Industry Standards</td>
-                            <td><button class="btn btn-primary" onclick="location.href='android_standard.html'">Read</button></td>
-                        </tr>
-                        <tr>
-                            <td>Python Industry Standards</td>
-                            <td><button class="btn btn-primary" onclick="location.href='python_standard.html'">Read</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>        
+            <div class="description col-lg-8">
+                <p> 
+                    Dev, 
+                </p>
+                <p>
+                    This tutorial will provide example of laravel collection contains value example. This tutorial will give you simple example of laravel collection check if value exists. you'll learn laravel collection contains array. i explained simply about laravel eloquent collection contains. Let's get started with laravel eloquent if contains.
+                </p>
+                <p>
+                    I will give you some examples of how to check value is exists or not in collection in laravel. you can easily add array in laravel 5, laravel 6, laravel 7, laravel 8, laravel 9, laravel 10 and laravel 11.
+                </p>
+                <p>
+                    Let's see example:
+                </p>
+                <p>
+                    <strong class="step">Example 1: Laravel Collection Contains Example</strong>
+                </p>
+                <div class="header-button mt-3">
+                    <span class="text-secondary d-flex align-items-center">code</span>
+                    <div class="btn btn-primary  copy-btn" onclick="copyCode()"><i class="fa-regular fa-copy"></i>Copy</div>
+                </div>
+                <div class="main-box-body">
+        <pre id="codeSnippet">
+        public function index()
+        {
+            $collection = collect([
+                    'Mumbai',
+                    'New York',
+                    'London',
+                    'Rajkot'
+                ]);
+
+            $collection->contains('Rajkot');  /* true */
+            
+            $collection->contains('Paris');   /* false */
+        }
+        </pre>
+                </div>
+                <p>
+                    <strong class="step">Example 1: Laravel Collection Contains Example</strong>
+                </p>
+                <div class="link">
+                    <span>Read Also :</span>
+                    <a href="#"> Laravel Collection Forget | Remove Item from Collection Laravel</a>
+                </div>
+                <p>
+                    I hope it can help you...
+                </p>
+            </div>
+            <div class="col-lg-4"></div>   
         </div>
     </section> 
 
@@ -133,6 +156,7 @@
         </div>
     </footer>
     <script src="public/js/TextChanges.js"></script>
+    <script src="../../public/js/CopyClipBord.js"></script>
     <!-- <script src="public/js/security.js"></script> -->
 
     <!---------------------- footer end ---------------------------------->

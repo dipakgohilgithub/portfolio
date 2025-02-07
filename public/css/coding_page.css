@@ -79,6 +79,65 @@ pre::-webkit-scrollbar-thumb:hover {
 background: #b30000; 
 }
 
+/* laravel installation page css  start*/
+* {
+    font-family: "crimson text";
+}
+.description p {
+    font-size: 18px;
+    color: #373737;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+strong.step {
+    display: block;
+    width: 100%;
+}
+
+.step {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;        
+    color: #1e5792;
+    border-left: 14px solid #1e5792 !important;
+    border-right: 14px solid #1e5792 !important;
+    border-radius: 6px;
+    border-color: #ececec;
+    border-right: 1px solid #ececec;
+    padding-left: 20px;
+    font-size: 22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.link {
+    border-radius: 6px;
+    padding-left: 20px;
+    padding: 12px 7px;
+    font-size: 18px;
+    margin: 20px 0;
+    border-left: 14px solid rgb(85, 181, 109) !important;
+    border-right: 14px solid rgb(85, 181, 109) !important;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+    background: rgb(217, 245, 224);
+    letter-spacing: 0.5px;
+}
+.link a {
+    color: #1e5792;
+}
+/* laravel installation page css  end*/
+
+/* pre define colour for code box  start*/
+
+.cmt {
+    color: greenyellow;
+}
+/* pre define colour for code box  end*/
+
 @media only screen and (max-width: 600px) {
     header {
         position: fixed !important;

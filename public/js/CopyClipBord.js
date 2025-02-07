@@ -1,5 +1,5 @@
-function copyCode() {
-    const codeToCopy = document.getElementById('codeSnippet').innerText.trim();
+function copyCode(snippetId) {
+    const codeToCopy = document.getElementById(snippetId).innerText.trim();
     const el = document.createElement('textarea');
     el.value = codeToCopy;
     document.body.appendChild(el);
@@ -7,7 +7,7 @@ function copyCode() {
     document.execCommand('copy');
     document.body.removeChild(el);
 
-    const copyBtn = document.querySelector('.copy-btn');
+    const copyBtn = document.querySelector(`.copy-btn[onclick="copyCode('${snippetId}')"]`);
     copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied';
     setTimeout(function () {
         copyBtn.innerHTML = '<i class="far fa-copy"></i> Copy';
