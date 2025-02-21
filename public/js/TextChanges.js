@@ -38,5 +38,5 @@ button.addEventListener('click', () => {
     button.classList.add('active');
 });
 
-//  show and hide images of about me and prjects
+//  all animation run this init and link tag
 AOS.init();

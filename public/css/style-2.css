@@ -10,6 +10,7 @@
     --color-hight: red ;
     --theme-color: black;
     --text-color: white;
+    --transition-sec: 0.5s;
 }
 
 .color-store {
@@ -38,7 +39,6 @@ hr {
     margin: 0px !important;
 }
 
-
 /*  header start ........ */
 .header {
     display: flex;
@@ -47,6 +47,7 @@ hr {
     background: #000;
     width: 100%;
     position: fixed;
+    z-index: 100;
 }
 
 .header .logo {
@@ -73,6 +74,7 @@ hr {
 
 .nav-list li a:hover {
     color: var(--color-hight);
+    transition: var(--transition-sec);
 }
 /*  header ends ............... */
 
@@ -108,6 +110,7 @@ hr {
 .personalImage img:hover {
     box-shadow: 0 0 50px var(--color-hight);
     border-radius: 50%;
+    transition: var(--transition-sec);
 }
 button {
     width: 170px;
@@ -120,8 +123,11 @@ button {
     border-radius: 40px !important;
     border: none;
     outline: none;
-    box-shadow: 0 0 5px var(--color-hight), 0 0 25px var(--color-hight);
     cursor: pointer;
+    box-shadow: 0 0 5px var(--color-hight), 0 0 10px var(--color-hight);
+}
+button:hover {
+    box-shadow: 0 0 10px var(--color-hight), 0 0 25px var(--color-hight);
 }
 
 /*  aboutme css starts */
@@ -160,6 +166,16 @@ button {
 
 .skill-list{
     padding:20px 0 20px 0;
+}
+
+#skill { 
+    display: block; 
+} 
+.skill-list.content {
+    display: none;
+}
+.active {
+    border-bottom: 5px solid var(--color-hight);
 }
 
 .skill-list li {
@@ -201,11 +217,13 @@ button {
     background-color: #1f243d;
     color: white;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .box:hover {
     border-radius: 20px;
     box-shadow: 0 0 20px  #617CBE;
+    transition: var(--transition-sec);
 }
 
 .box h1 {
@@ -251,6 +269,7 @@ button {
 }
 .footer ul li a:hover {
     color: var(--color-hight);
+    transition: var(--transition-sec);
 }
 .test {
     color: #617CBE;

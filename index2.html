@@ -10,6 +10,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='public/font_awesome/css/all.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 
@@ -19,12 +22,12 @@
             </div>
             <div class="navbar nav-list">
                 <ul>
-                    <li> <a href="#">Home </a></li>
-                    <li> <a href="#">Coding's </a></li>
-                    <li> <a href="#">Skill </a></li>
-                    <li> <a href="#">My Work </a></li>
-                    <li> <a href="#">About Me </a></li>
-                    <li> <a href="#">Contact Me </a></li>
+                    <li> <a href="#index2.html">Home </a></li>
+                    <li> <a href="code/dashboard.html">Coding's </a></li>
+                    <li> <a href="#skillEducation">Skill </a></li>
+                    <li> <a href="#projects">My Work </a></li>
+                    <li> <a href="#aboutMe" style="--1:2">About Me </a></li>
+                    <li> <a href="#ContactMe">Contact Me </a></li>
                 </ul>
             </div>
     </header>
@@ -52,10 +55,10 @@
 
         <section id="aboutMe">
             <div class="row">
-                <div class="php-logo col-lg-6 col-12">
+                <div class="php-logo col-lg-6 col-12" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="20">
                     <img src="public/images/config/php_image.png" alt="">
                 </div>
-                <div class="aboutContent col-lg-6 col-12">
+                <div class="aboutContent col-lg-6 col-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700">
                     <h1 >About <span>Me</span> </h1>
                     <h3> <span>PHP - Laravel </span> Backend Developer </h3>
                     <p>
@@ -73,18 +76,18 @@
 
         <section id="skillEducation">
             <div class="row">
-                <h2 class="text-center mt-4"> My Skill Education <span>& Experience</span> </h2>
+                <h2 class="text-center mt-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700"> My Skill Education <span>& Experience</span> </h2>
             </div>
-            <div class="row skill-list">
+            <div class="row skill-list" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <ul>
-                    <li class="active">Skills</li>
-                    <li>Experience</li>
-                    <li>Education</li>
+                    <li onclick="test('skill', this)" class="active">Skills</li>
+                    <li onclick="test('experince', this)" >Experience</li>
+                    <li onclick="test('education', this)" >Education</li>
                 </ul>
             </div>
 
             <div class="row">
-                <div class="technical-bars" style="display: block;">
+                <div class="technical-bars content" id="skill">
                     <div class="bar">
                         <div class="info"><span style="color:  #DD4B25;"> <i style="color: #DD4B25;" class='bx bxl-html5'></i> HTML</span></div>
                         <div class="progress-line html"><span></span></div>
@@ -122,7 +125,7 @@
                         <div class="progress-line python"><span></span></div>
                     </div>
                 </div>
-                <div class="expContent" style="display: none;">
+                <div class="expContent content" id="experince">
                     <div class="text-center">
                         <h5> Total Work Experience <span>1 year 8 month </span> </h5><hr>
                     </div>
@@ -139,7 +142,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="eduContent" style="display: block;">
+                <div class="eduContent content" id="education">
                     <div class="text-center">
                         <img src="public/images/education/ssccm.jpg" alt="" />
                         <p>BCA (Bachelor In Computer Applications)<br>
@@ -154,10 +157,10 @@
 
         <section id="projects">
             <div class="row">
-                <h1 class="text-center"> My <span> Work </span></h1>
+                <h1 class="text-center" data-aos="fade-right"> My <span> Work </span></h1>
             </div>
             <div class="box-main">
-                <div class=" d-flex flex-column box">
+                <a href="#/" class="d-flex flex-column box" data-aos="fade-down-right">
                     <div class="row">
                         <img src="public/images/project/project1.png" alt="">
                     </div>
@@ -169,8 +172,8 @@
                             this system provides society management for System
                         </p>
                     </div>
-                </div>
-                <div class=" d-flex flex-column box">
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-down">
                     <div class="row">
                         <img src="public/images/project/project1.png" alt="">
                     </div>
@@ -182,8 +185,8 @@
                             this system provides society management for System
                         </p>
                     </div>
-                </div>
-                <div class=" d-flex flex-column box">
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-down-right">
                     <div class="row">
                         <img src="public/images/project/project1.png" alt="">
                     </div>
@@ -195,8 +198,8 @@
                             this system provides society management for System
                         </p>
                     </div>
-                </div>
-                <div class=" d-flex flex-column box">
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-up-right">
                     <div class="row">
                         <img src="public/images/project/project1.png" alt="">
                     </div>
@@ -208,8 +211,8 @@
                             this system provides society management for System
                         </p>
                     </div>
-                </div>
-                <div class=" d-flex flex-column box">
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-up">
                     <div class="row">
                         <img src="public/images/project/project1.png" alt="">
                     </div>
@@ -221,8 +224,8 @@
                             this system provides society management for System
                         </p>
                     </div>
-                </div>
-                <div class=" d-flex flex-column box">
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-up-right">
                     <div class="row">
                         <img src="public/images/project/project1.png" alt="">
                     </div>
@@ -234,17 +237,17 @@
                             this system provides society management for System
                         </p>
                     </div>
-                </div>
+                </a>
             </div>
         </section><hr>
     </div>
     
     <footer class="footer">
-        <div class="footer-items">
+        <div class="footer-items" id="ContactMe">
             <div class="row">
                 <h1 class="text-center">Contact <span>Me</span><i class="fa-solid fa-handshake"></i></h1>
             </div>
-            <div class="row">
+            <div class="row" data-aos="fade-up">
                 <ul>
                     <li> 
                         <a target="__blank" href="https://www.linkedin.com/in/dipak-gohil-828242270"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
@@ -274,5 +277,21 @@
     </footer>
 
     <script src="public/js/TextChanges.js"></script>
+    <script>
+        function test(section,element) {
+
+            document.querySelectorAll(".content").forEach(div => {
+                div.style.display = "none";
+            });
+    
+            document.getElementById(section).style.display = "block";
+
+            document.querySelectorAll(".skill-list ul li").forEach(li => {
+                li.classList.remove("active");
+            });
+
+            element.classList.add("active");
+        }
+    </script>    
 </body>
 </html>
