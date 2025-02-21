@@ -31,7 +31,7 @@ span {
 }
 
 .container, .container-fluid {
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 hr {
@@ -128,6 +128,7 @@ button {
 }
 button:hover {
     box-shadow: 0 0 10px var(--color-hight), 0 0 25px var(--color-hight);
+    transition: var(--transition-sec);
 }
 
 /*  aboutme css starts */
@@ -153,7 +154,7 @@ button:hover {
 }
 /*  aboutme css ends */
 
-/*  skill educations css start */
+/*  skill educations exp css start */
 #skillEducation {
     color: white;
     padding: 0 300px;
@@ -168,12 +169,6 @@ button:hover {
     padding:20px 0 20px 0;
 }
 
-#skill { 
-    display: block; 
-} 
-.skill-list.content {
-    display: none;
-}
 .active {
     border-bottom: 5px solid var(--color-hight);
 }
@@ -190,14 +185,19 @@ button:hover {
 .expContent ul {
     display: flex;
     flex-direction: column;
+    /* padding: 30px; */
 }
 
 .eduContent img{
     width: 25%;
 }
-/*  skill educations css ends */
 
-/*  projects css start */
+.skill-items .content {
+    height: 350px;
+}
+/*  skill educations exp css ends */
+
+/*  projects mywork css start */
 #projects h1 {
     font-size: 3.4rem;
     color: white;
@@ -235,7 +235,7 @@ button:hover {
     width: 250px;
     border-radius: 15px;
 }
-/*  projects css ends */
+/*  projects mywork css ends */
 
 /*  footer css start............. */
 .footer {
@@ -271,9 +271,6 @@ button:hover {
     color: var(--color-hight);
     transition: var(--transition-sec);
 }
-.test {
-    color: #617CBE;
-}
 .copyright {
     padding-top: 10px;
 }
@@ -291,8 +288,11 @@ button:hover {
     }
 
     .personalImage img {
-        width: 100%;
-        height: 90%;
+        height: 300px;
+        width: 300px;
+    }
+    button {
+        margin: 10px 0 30px 0px !important;
     }
 
     .detailsContents p{
@@ -311,7 +311,7 @@ button:hover {
         padding: 10px 0px !important;
     }
     .aboutContent p{
-        margin: 10px;
+        margin: 0px 20px 20px 20px;
         font-size: 15px;
     }
     #skillEducation {
@@ -320,16 +320,32 @@ button:hover {
 
     #skillEducation h2 {
         font-size: 35px;
+        padding-bottom: 10px;
         margin: 0;
     }
     .skill-list{
         padding: 20px;
     }
 
+    .eduContent p {
+        padding: 10px;
+    }
+
     .eduContent img{
         width: 50%;
     }
 
+    .skill-items {
+        padding: 5px 30px;
+    }
+
+    .expContent ul {
+        padding-left: 0px;
+        /* padding: 0px 10px; */
+    }
+    #projects .heading h1 {
+        margin: 10px 0px 30px 0px;
+    }
     #projects .box-main {
         display: flex;
         flex-direction: column;
@@ -352,6 +368,10 @@ button:hover {
         align-items: center;
     }
 
+    .footer ul li {
+        padding: 5px;
+    }
+
     .copyright {
         padding: 20px 10px 10px 10px !important;
     }
@@ -359,10 +379,6 @@ button:hover {
 /* media query ends.......... */
 
 /* progress bar start........ */
-.bar {
-    font-size: 23px;
-}
-
 .technical-bars {
     align-items: center;
 }
