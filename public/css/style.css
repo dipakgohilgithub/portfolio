@@ -412,7 +412,6 @@ span {
     height: 300px;
     padding: 7px 50px;
     margin-left: 120px;
-
 }
 
 .bar {
@@ -894,15 +893,12 @@ hr {
     .home {
         display: flex;
         flex-wrap: wrap;
+        padding: 30px;
     }
 
     .home .image img {
         height:300px;
         width: 400PX;
-    }
-
-    .home-content {
-        margin-top: 100px;
     }
 
     .container1 {
