@@ -1,227 +1,171 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>Dipak Portfolio</title>
+    <link rel="icon" href="public/images/personal/deep.jpg">
 
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/style-2.css">
+
+    <link rel="stylesheet" href="public/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="public/bootstrap/bootstrap.js">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='public/font_awesome/css/all.css' rel='stylesheet'>
+    
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <link rel="stylesheet" href="public/font_awesome/css/all.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-
-<body class="body">
-
-    <!----------------------- header start ----------------------->
-    <header class="header">
-        <div class="logo">
-            <a href="index.html"><img src="public/images/personal/php_icon.png"></a>
+<body class="theme">
+    
+    <header id="header">
+        <div class="main-header">
+            <div class="logo">
+                <a href="#"><img src="public/images/config/logo.png" alt=""></a>
+            </div>
+            <div class="main-header-list-items">
+                <ul>
+                    <li> <a href="index.html">Home </a></li>
+                    <li> <a href="code/dashboard.html">Coding's </a></li>
+                    <li> <a href="#skillEducation">Skill </a></li>
+                    <li> <a href="#projects">My Work </a></li>
+                    <li> <a href="#aboutMe">About Me </a></li>
+                    <li > <a href="#ContactMe">Contact Me </a></li>
+                </ul>
+            </div> 
         </div>
-        <div class="navbar">
-            <a href="index.html" style="--1:1" class="active">Home</a>
-            <a href="code/dashboard.html">Coding's</a>
-            <a href="#about-me">About Me</a>
-            <a href="#see1" style="--1:3">Skills</a>
-            <a href="#project" style="--1:4">My Work</a>
-            <a href="#contrct" style="--1:6">Contact Me</a>
+        <div class="header-responsive">
+            <div class="logo-toggler">
+                <a href="#/"><img src="public/images/config/logo.png" alt=""></a>
+                <i class='bx bx-menu' onclick="navTogglerBtn()"></i>
+            </div><hr>
+            <div class="col header-responsive-list-items" style="display: none;">
+                <ul>
+                    <li> <a href="index.html">Home </a></li>
+                    <li> <a href="code/dashboard.html"> Coding's </a></li>
+                    <li> <a href="#skillEducation">Skill </a></li>
+                    <li> <a href="#projects">My Work </a></li>
+                    <li> <a href="#aboutMe">About Me </a></li>
+                    <li> <a href="#ContactMe">Contact Me </a></li>
+                </ul>
+            </div>
         </div>
     </header>
-    <!------------------------ header end  ------------------------->
-
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="nav-close">
-        <div class="container-fluid">
-            <a class="navbar-brand logo" href="#"><img src="public/images/personal/php_icon.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="code/dashboard.html">Coding's</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about-me">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#see1">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#project">My Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contrct">Contact Me</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!----------------------- Main body start --------------------->
-
-    <section class="home" id="home1">
-        <div class="home-content">
-            <h3>Hello, i am</h3>
-            <h1>Dipak Gohil</h1>
-            <h3 >And i'm a </br><span class="text"></span></h3>
-            <p>I,m a PHP / Laravel Developer<br>
-                With 2 Year Experience in PHP-Laravel Development, front-end design more....
-            </p>
-            <br>
-            <a class="down" href="public/uploads/resume/resume_dipak_gohil.pdf" download="Dipak_Gohil_Resume">
-                <button><i class='bx bxs-download'></i>Download CV</button>
-            </a>
-        </div>
-        <div class="image">
-            <img src="public/images/personal/deep.jpg">
-        </div>
-    </section>
-    
-    <center>
-        <hr class="hr" id="hr">
-    </center>
-
-    <section class="about" id="about-me">
-        <div class="main" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="20">
-            <img src="public/images/temp/php-bg.png ">
-        </div>
-        <div class="about-text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700">
-            <h2>About <span>Me</span> </h2>
-            <h4 data-aos="fade-up" data-aos-duration="1500"> <span>PHP - Laravel </span> Backend Developer </h4>
-            <p data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
-                I am a passionate and dedicated PHP Laravel developer with 2 years of hands-on experience in building dynamic and scalable web applications. 
-                With a strong foundation in PHP and Laravel, I specialize in crafting clean, efficient, and maintainable code to deliver high-quality solutions for clients.
-
-                I am committed to staying up-to-date with the latest industry trends, continuously improving my skills, 
-                and delivering solutions that exceed expectations. Collaboration, problem-solving, and a focus on efficiency are at the core of my development process.
-                
-                Let's connect and explore how I can help bring your project to life with my expertise!</p>
-        </div>
-    </section>
-    <hr>
-
-    <!-- my skill experiance education -->
-    <section class="see" id="see1">
-        <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700">My Skill Education <span>& Experience
-            </span></h2>
-
-        <ul class="tabs" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-            <li class="active">Skill</li>
-            <li>Experience</li>
-            <li>Education</li>
-        </ul>
-        <div class="contents" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
-            data-aos-offset="0">
-            <div class="content active">
-                <div class="container1" id="skills">
-                    <div class="technical-bars">
-                        <div class="bar">
-                            <div class="info">
-                                <span> <i style="color: #c95d2e;" class='bx bxl-html5'></i> HTML</span>
-                            </div>
-                            <div class="progress-line html">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="info">
-                                <span  style="color:#147bbc;"> <i style="color: #147bbc;" class='bx bxl-css3'></i> CSS</span>
-                            </div>
-                            <div class="progress-line css">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="info">
-                                <span  style="color: #b0b;"> <i style="color: #b0b;" class='bx bxl-bootstrap'></i> Bootstrap</span>
-                            </div>
-                            <div class="progress-line bootstrap">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="info">
-                                <span  style="color:yellow;"> <i style="color: yellow;" class='bx bxl-javascript'></i> Javascript</span>
-                            </div>
-                            <div class="progress-line javascript">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="info">
-                                <span  style="color:burlywood;"> <i style="color: burlywood;" class='bx bxl-jquery'></i> jQuery</span>
-                            </div>
-                            <div class="progress-line jquery">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="info">
-                                <span  style="color: grey;"> <i style="color: grey;" class='bx bxl-github'></i> Github</span>
-                            </div>
-                            <div class="progress-line github">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="info">
-                                <span  style="color:#617CBE;"> <i style="color:black; background-color:#617CBE;" class='bx bxl-php'></i> PHP</span>
-                            </div>
-                            <div class="progress-line php">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="info">
-                                <span  style="color: #30D780;"> <i style="color: #30D780;" class='bx bxl-android'></i> Android</span>
-                            </div>
-                            <div class="progress-line android">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="bar">
-                            <div class="info">
-                                <span  style="color: blueviolet;"> <i style="color: blueviolet;" class='bx bxl-python'></i> Python</span>
-                            </div>
-                            <div class="progress-line python">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
+ 
+    <div class="container-fluid">
+        <section id="personalDetails" class="afterHeader">
+            <div class="row">
+                <div class="detailsContents col-12 col-lg-6">
+                    <h3>Hello, i am</h3>
+                    <h1>Dipak Gohil</h1>
+                    <h3>And i'm a <br><span class="text"></span></h3>
+                    <p>I,m a PHP / Laravel Developer<br>
+                        With 2 Year Experience in PHP-Laravel Development, front-end design more....
+                    </p>
+                    <a href="public/uploads/documents/resume/dipak_gohil_resume.pdf" download="Dipak_Gohil_Resume">
+                        <button><i class='bx bxs-download'></i> Download CV</button>
+                    </a>
+                </div>
+                <div class="personalImage col-12 col-lg-6">
+                    <img src="public/images/personal/deep.jpg" alt="">
                 </div>
             </div>
-            <div class="content">
-                <center><h5> Total Work Experience <span>1 year 8 month </span> </h5></center> <hr>
+        </section><hr>
+
+        <section id="aboutMe">
+            <div class="row">
+                <div class="php-logo col-lg-6 col-12" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="20">
+                    <img src="public/images/config/php_image.png" alt="">
+                </div>
+                <div class="aboutContent col-lg-6 col-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700">
+                    <h1 >About <span>Me</span> </h1>
+                    <h3> <span>PHP - Laravel </span> Backend Developer </h3>
+                    <p>
+                        I am a passionate and dedicated PHP Laravel developer with 2 years of hands-on experience in building dynamic and scalable web applications. 
+                        With a strong foundation in PHP and Laravel, I specialize in crafting clean, efficient, and maintainable code to deliver high-quality solutions for clients.
+                        
+                        I am committed to staying up-to-date with the latest industry trends, continuously improving my skills, 
+                        and delivering solutions that exceed expectations. Collaboration, problem-solving, and a focus on efficiency are at the core of my development process.
+                        
+                        Let's connect and explore how I can help bring your project to life with my expertise!
+                    </p>
+                </div>
+            </div>
+        </section><hr>
+
+        <section id="skillEducation">
+            <div class="row">
+                <h2 class="text-center mt-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="700"> My Skill Education <span>& Experience</span> </h2>
+            </div>
+            <div class="row skill-list" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <ul>
-                    <li>
-                        <p>Trulloy IT Services (March 2023 - March 2024 ) <br>
-                            1 year experiance in php developer 
-                        </p>
-                    </li>
-                    <li>
-                        <p>Inbox Infotech Private Limited (March 2024 - Jan 2025 ) <br>
-                            8 month experiance in php - laravel developer 
-                        </p>
-                    </li>
+                    <li onclick="hideShow('skill', this)" class="active">Skills</li>
+                    <li onclick="hideShow('experince', this)" >Experience</li>
+                    <li onclick="hideShow('education', this)" >Education</li>
                 </ul>
             </div>
-            <div class="content">
-                <div class="tt">
-                    <div>
+
+            <div class="row skill-items">
+                <div class="technical-bars content" id="skill" style="display: block;">
+                    <div class="bar">
+                        <div class="info"><span style="color:  #DD4B25;"> <i style="color: #DD4B25;" class='bx bxl-html5'></i> HTML</span></div>
+                        <div class="progress-line html"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info"><span style="color:#147bbc;"> <i style="color: #147bbc;" class='bx bxl-css3'></i> CSS</span></div>
+                        <div class="progress-line css"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info"><span style="color: #b0b;"> <i style="color: #b0b;" class='bx bxl-bootstrap'></i> Bootstrap</span></div>
+                        <div class="progress-line bootstrap"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info"><span style="color:yellow;"> <i style="color: yellow;" class='bx bxl-javascript'></i> Javascript</span></div>
+                        <div class="progress-line javascript"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info"><span style="color:burlywood;"> <i style="color: burlywood;" class='bx bxl-jquery'></i> jQuery</span></div>
+                        <div class="progress-line jquery"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info"><span style="color: grey;"> <i style="color: grey;" class='bx bxl-github'></i> Github</span></div>
+                        <div class="progress-line github"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info"><span style="color:#617CBE;"> <i style="color:black; background-color:#617CBE;" class='bx bxl-php'></i> PHP</span></div>
+                        <div class="progress-line php"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info"><span style="color: #30D780;"> <i style="color: #30D780;" class='bx bxl-android'></i> Android</span></div>
+                        <div class="progress-line android"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info"><span style="color: blueviolet;"> <i style="color: blueviolet;" class='bx bxl-python'></i> Python</span></div>
+                        <div class="progress-line python"><span></span></div>
+                    </div>
+                </div>
+                <div class="expContent content" id="experince" style="display: none;">
+                    <div class="text-center py-4">
+                        <h5> Total Work Experience <span>1 year 8 month </span> </h5><hr>
+                    </div>
+                    <ul class="text-center" >
+                        <li>
+                            <p>Trulloy IT Services ( March 2023 - March 2024 ) <br>
+                                <span>1 year experiance </span> in php developer 
+                            </p>
+                        </li>
+                        <li>
+                            <p>Inbox Infotech Private Limited ( March 2024 - Jan 2025 ) <br>
+                                <span>8 month experiance </span> in php - laravel developer 
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="eduContent content" id="education" style="display: none;">
+                    <div class="text-center">
                         <img src="public/images/education/ssccm.jpg" alt="" />
                         <p>BCA (Bachelor In Computer Applications)<br>
                             Maharaja Krishnakumarsinhji Bhavnagar University (MKBU)<br>
@@ -229,96 +173,159 @@
                             passing year of 2023 with 60%
                         </p>
                     </div>
-                </div>
+                </div>    
+            </div>
+        </section><hr>
+
+        <section id="projects">
+            <div class="row heading">
+                <h1 class="text-center" data-aos="fade-right"> My <span> Work </span></h1>
+            </div>
+            <div class="box-main pb-4">
+                <a href="#/" class="d-flex flex-column box" data-aos="fade-down-right">
+                    <div class="row">
+                        <img src="public/images/projects/projects.jpg" alt="Front Image">
+                    </div>
+                    <div class="row">
+                        <h2 class="text-center">Society Management System</h2>
+                    </div>
+                    <div class="desc mt-4">
+                        <p>
+                            In this project can manage all query for society residence related to manage all types 
+                            bill  like  maintanance  bill,  water  bill,  electricity  bill.  and  raise  a  complaint  against 
+                            society member any auery related problem etc.
+                        </p>
+                    </div>
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-down">
+                    <div class="row">
+                        <img src="public/images/projects/projects.jpg" alt="">
+                    </div>
+                    <div class="row">
+                        <h1 class="text-center">Trulloy Employee Management System</h1>
+                    </div>
+                    <div class="desc mt-4">
+                        <p>
+                            In this provides employee management like salary, rating, positon and view
+                            daily task, handle projects status and their due date. this system is
+                            provides features are leaves, profile to see their technical
+                            rating, salary etc. employee registration, active and deactive.showing
+                            all details of employee.
+                        </p>
+                    </div>
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-down-right">
+                    <div class="row">
+                        <img src="public/images/projects/projects.jpg" alt="">
+                    </div>
+                    <div class="row">
+                        <h1 class="text-center">Urban Service (Website)</h1>
+                    </div>
+                    <div class="desc mt-4">
+                        <p>
+                            In this webiste can electrician, pumber, car showroom etc store can share their
+                            contact number to contact them if need some requirements like user can need
+                            requirement of electrician so user can direct search nearest electrician or search
+                            category wise what type of services they needed.
+                        </p>
+                    </div>
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-up-right">
+                    <div class="row">
+                        <img src="public/images/projects/projects.jpg" alt="">
+                    </div>
+                    <div class="row">
+                        <h1 class="text-center">E-Commerce (Website)</h1>
+                    </div>
+                    <div class="desc mt-4">
+                        <p>
+                            In this webiste can provide online products selling like online store (flipkart,
+                            amazone) and user can buy the product what they actually needed or requirments.
+                        </p>
+                    </div>
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-up-right">
+                    <div class="row">
+                        <img src="public/images/projects/projects.jpg" alt="">
+                    </div>
+                    <div class="row">
+                        <h1 class="text-center">Eclassmates</h1>
+                    </div>
+                    <div class="desc mt-4">
+                        <p>
+                            this is school book salling site 
+                            school students are register first abd then buy book as per their boards required, 
+                            this systems provides  ,book view, place order, delivery, traking, cash on delivery etc.
+                        </p>
+                    </div>
+                </a>
+                <a href="#/" class=" d-flex flex-column box" data-aos="fade-up-right">
+                    <div class="row">
+                        <img src="public/images/projects/projects.jpg" alt="">
+                    </div>
+                    <div class="row">
+                        <h1 class="text-center">Payroll System (zoho clone)-ERP</h1>
+                    </div>
+                    <div class="desc mt-4">
+                        <p>
+                           this is zoho clone manage company all functionality like,
+                           salary, leaves, project task live status, holidays, pf,and employees all feature needed in industry are included etc.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </section><hr>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-items" id="ContactMe">
+            <div class="row">
+                <h1 class="text-center">Contact <span>Me</span><i class="fa-solid fa-handshake"></i></h1>
+            </div>
+            <div class="row" data-aos="fade-up">
+                <ul>
+                    <li> 
+                        <a target="__blank" href="https://www.linkedin.com/in/dipak-gohil-828242270"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    </li>
+                    <li> 
+                        <a target="__blank" href="https://github.com/dipakgohilgithub"> <i class="fa-brands fa-github"></i> Github</a>
+                    </li>
+                    <li> 
+                        <a target="__blank" href="mailto:dipakgohil7273@gmail.com"> <i class="fa-regular fa-envelope"></i> Gmail</a>
+                    </li>
+                    <li> 
+                        <a target="__blank" href="tel:7878739362"> <i class="fa-solid fa-phone"></i> Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
-<br><br><br><br><br><hr>
-    <!---------------------- my work projects --------------->
-    <section id="project">
-        <div class="head2" data-aos="fade-left">
-            <h1> My <span> Work </span></h1>
-        </div>
-        <div class="row1">
-            <div class="box1" data-aos="fade-down-right">
-                <img src="public/images/project/project1.png" alt="">
-                <h1 class="head">Student Management</h1>
-                <p>In this page the student gets all the information</p>
-            </div>
-
-            <div class="box1" data-aos="fade-down">
-                <img src="public/images/project/project5.png" alt="">
-                <h1 class="head">Admin </h1>
-                <p>Admin can viwe information on this Page</p>
-            </div>
-
-            <div class="box1" data-aos="fade-down-right">
-                <img src="public/images/project/project3.png" alt="">
-                <h1 class="head">User</h1>
-                <p>User can see their information at this Page</p>
-            </div>
-
-            <div class="box1" data-aos="fade-up-right">
-                <img src="public/images/project/project8.png" alt="">
-                <h1 class="head">Login Page</h1>
-                <p>This steps into the home page</p>
-            </div>
-
-            <div class="box1" data-aos="fade-up">
-                <img src="public/images/project/project6.png" alt="">
-                <h1 class="head">Admin Deshboard</h1>
-                <p>On this page, the Admin can control all the problems</p>
-            </div>
-            <div class="box1" data-aos="fade-up-RIGHT">
-                <img src="public/images/project/project7.png" alt="">
-                <h1 class="head">User Deshboard</h1>
-                <p>On this page, user can send all issues to admin</p>
-            </div>
-        </div>
-    </section>
-    <hr>
-     <!---------------------- Main body end ---------------------------------->
-
-     <!---------------------- footer start ---------------------------------->
-    <footer>
-        <div class="contactme" id="contrct">
-            <h1 data-aos="fade-left">Contact <span>Me</span><i class="fa-solid fa-handshake"></i></h1>
-            <div class="socialmedia" data-aos="fade-up">
-                <a target="_blank" href="https://www.linkedin.com/in/dipak-gohil-828242270">
-                    <div class="media">
     
-                        <p><i class="fa-brands fa-linkedin"></i> LinkedIn </p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://github.com/dipakgohilgithub">
-                    <div class="media">
-    
-                        <p><i class="fa-brands fa-github"></i> GitHub </p>
-                    </div>
-                </a>
-                <a target="_blank" href="mailto:dipakgohil7273@gmail.com">
-                    <div class="media">
-    
-                        <p><i class="fa-regular fa-envelope"></i> Gmail </p>
-                    </div>
-                </a>
-                <a href="tel:7878739362">
-                    <div class="media">
-                        <p><i class="fa-solid fa-phone"></i> Conatact </p>
-                    </div>
-                </a>
+        <hr>
+        <div class="row text-center copyright">
+            <div class="col-8 col-lg-6">
+                <p>Thanks You For Visit...&#128522;</p>
             </div>
-            <hr>
-            <div class="footer">
-                <div class="ty">Thank You For Visit &#128522;</div>
-                <div class="con"> ~ Dipak Gohil</div>
+            <div class="col-4 col-lg-6">
+                <p> ~ Dipak Gohil</p>
             </div>
         </div>
     </footer>
+
     <script src="public/js/TextChanges.js"></script>
-    <!-- <script src="public/js/security.js"></script> -->
+    <script src="public/js/hideShow.js"></script>
 
-    <!---------------------- footer end ---------------------------------->
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hoverImage = document.getElementById("hoverImg");
+    
+            hoverImage.addEventListener("mouseenter", function () {
+                this.src = "public/images/project/project_1_admin.png";
+            });
+    
+            hoverImage.addEventListener("mouseleave", function () {
+                this.src = "public/images/project/project_1_main.png";
+            });
+        });
+    </script>
 </body>
 </html>

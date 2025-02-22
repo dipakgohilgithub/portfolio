@@ -5,7 +5,7 @@
     font-family: 'poppins', sans-serif;
 }
 
-/* global declared ...... */
+/* global declared start.............................. */
 :root {
     --color-hight: red ;
     --theme-color: black;
@@ -13,8 +13,8 @@
     --transition-sec: 0.5s;
 }
 
-.color-store {
-    color: #00ADB5;     /* (Cyan) */
+.theme {
+    background-color: var(--theme-color);
 }
 
 ul,li {
@@ -30,61 +30,54 @@ span {
     color:var(--color-hight);
 }
 
-.theme {
-    background-color: var(--theme-color);
-}
-/* .container, .container-fluid {
-    padding-top: 80px;
-} */
-
 hr {
     color: var(--text-color) !important;
     margin: 0px !important;
 }
+/* global declared ends.............................. */
 
-/*  header start ........ */
-.header {
+/*  header start.............................. */
+#header {
     position: sticky;
     top: 0;
+    z-index: 100;
+}
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--theme-color);
-    width: 100%;
-    z-index: 100;
     color: var(--text-color);
+    width: 100%;
 }
-
-.header .logo {
+.main-header .logo {
     margin: 20px;
 }
-
-.header .logo img{
+.main-header .logo img{
     width: 100px;
     height: 50px;
 }
-
-.nav-list ul {
+.main-header-list-items ul {
     display: flex;
 }
-
-.nav-list li a{
+.main-header-list-items  li a{
     padding: 10px;
     margin: 10px;
     color: inherit;
     font-size: 25px;
-    animation: slideTop .10s ease forwards;
-    animation-delay: calc(.2s * var(--i));
 }
-
-.nav-list li a:hover {
+.main-header-list-items li a:hover {
     color: var(--color-hight);
     transition: var(--transition-sec);
 }
-/*  header ends ............... */
+.header-responsive {
+    display: none;
+}
+/*  header ends.............................. */
 
-/* index main body css ...................... */
-/*  personal details ...... */
+/* index main body css.............................. */
+
+/*  personal details.............................. */
 #personalDetails {
     padding: 20px 50px 50px 50px;
 }
@@ -135,8 +128,9 @@ button:hover {
     box-shadow: 0 0 10px var(--color-hight), 0 0 25px var(--color-hight);
     transition: var(--transition-sec);
 }
+/* personal details ends.............................. */
 
-/*  aboutme css starts */
+/*  aboutme css starts.............................. */
 #aboutMe {
     padding: 100px 0px 50px 0px;
 }
@@ -157,9 +151,9 @@ button:hover {
 .aboutContent h1{
     font-size: 60px;
 }
-/*  aboutme css ends */
+/*  aboutme css ends.............................. */
 
-/*  skill educations exp css start */
+/*  skill educations exp css start.............................. */
 #skillEducation {
     color: var(--text-color);
     padding: 100px 300px 0px 300px;
@@ -200,9 +194,9 @@ button:hover {
 .skill-items .content {
     height: 350px;
 }
-/*  skill educations exp css ends */
+/*  skill educations exp css ends.............................. */
 
-/*  projects mywork css start */
+/*  projects mywork css start.............................. */
 #projects {
     padding-top: 100px;
     color: var(--text-color);
@@ -243,34 +237,28 @@ button:hover {
     width: 250px;
     border-radius: 15px;
 }
-/*  projects mywork css ends */
+/*  projects mywork css ends.............................. */
 
-/*  footer css start............. */
+/*  footer css start.............................. */
 .footer {
-    /* background-color: black; */
     color: var(--text-color);
 }
-
 .footer-items {
     padding: 50px 0px;
 }
-
 .footer .row {
     margin-right: 0px !important;
 }
-
 .footer ul {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
-
 .footer ul li {
     padding: 20px;
     font-weight: bold;
     font-size: 20px;
 }
-
 .footer ul li a { 
     color: inherit;
     font-size: 20px;
@@ -282,113 +270,9 @@ button:hover {
 .copyright {
     padding-top: 10px;
 }
-/*  footer css ends............. */
+/* footer css ends.............................. */
 
-/* media query mobile ................. */
-
-@media(max-width:540px){
-    .container-fluid {
-        padding-left: 0px !important;
-    }
-
-    #personalDetails {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 30px;
-    }
-
-    .personalImage img {
-        height: 300px;
-        width: 300px;
-    }
-    button {
-        margin: 10px 0 30px 0px !important;
-    }
-
-    .detailsContents p{
-        width: 100%;
-    }
-
-    .php-logo img {
-        display: none;
-    }
-
-    #aboutMe {
-        padding: 10px 0px !important;
-    }
-    #aboutMe h1, #aboutMe h3 {
-        text-align: center;
-        padding: 10px 0px !important;
-    }
-    .aboutContent p{
-        margin: 0px 20px 20px 20px;
-        font-size: 15px;
-    }
-    #skillEducation {
-        padding: 0;
-    }
-
-    #skillEducation h2 {
-        font-size: 35px;
-        padding-bottom: 10px;
-        margin: 0;
-    }
-    .skill-list{
-        padding: 20px;
-    }
-
-    .eduContent p {
-        padding: 10px;
-    }
-
-    .eduContent img{
-        width: 50%;
-    }
-
-    .skill-items {
-        padding: 5px 30px;
-    }
-
-    .expContent ul {
-        padding-left: 0px;
-        /* padding: 0px 10px; */
-    }
-    #projects .heading h1 {
-        margin: 10px 0px 30px 0px;
-    }
-    #projects .box-main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .box {
-        margin: 10px;
-    }
-    .box-main {
-        padding-left: 0px !important;
-    }
-
-    .desc p {
-        margin: 10px 0;
-    }
-
-    .footer ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer ul li {
-        padding: 5px;
-    }
-
-    .copyright {
-        padding: 20px 10px 10px 10px !important;
-    }
-}
-/* media query ends.......... */
-
-/* progress bar start........ */
+/* progress bar start.............................. */
 .technical-bars {
     align-items: center;
 }
@@ -556,4 +440,140 @@ button:hover {
         opacity: 1;
     }
 }
-/* progress bar ends */
+/* progress bar ends.............................. */
+
+/* media query mobile ................. */
+@media(max-width:540px){
+    
+    .main-header {
+        display: none;
+    }
+    .header-responsive {
+        display: inline-block;
+    }
+    .header-responsive {
+        position: sticky;
+        top: 0;
+        display: block;
+        background-color: #212529;
+        color: var(--text-color);
+        z-index: 100;
+    }
+    .header-responsive .logo-toggler {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+    }
+    .header-responsive .logo-toggler img {
+        height: 50px;
+        width: 100px;
+    }
+    .header-responsive .logo-toggler i {
+        border: 1px solid var(--text-color);
+        border-radius: 5px;
+        font-size: 48px;
+        width: 50px;
+        height: 50px;
+        color:  var(--text-color);
+    }
+    .header-responsive-list-items {
+        justify-items: center;
+    }
+    .header-responsive-list-items ul li {
+        padding: 5px 0px;
+    }
+    .header-responsive-list-items ul li a {
+        font-size: 25px;
+        color: var(--text-color);
+    }
+
+    .container-fluid {
+        padding-left: 0px !important;
+    }
+
+    #personalDetails {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 30px;
+    }
+    .personalImage img {
+        height: 300px;
+        width: 300px;
+    }
+    button {
+        margin: 10px 0 30px 0px !important;
+    }
+
+    .detailsContents p{
+        width: 100%;
+    }
+    .php-logo img {
+        display: none;
+    }
+    #aboutMe {
+        padding: 10px 0px !important;
+    }
+    #aboutMe h1, #aboutMe h3 {
+        text-align: center;
+        padding: 10px 0px !important;
+    }
+    .aboutContent p{
+        margin: 0px 20px 20px 20px;
+        font-size: 15px;
+    }
+
+    #skillEducation {
+        padding: 0;
+    }
+    #skillEducation h2 {
+        font-size: 35px;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+    .skill-list{
+        padding: 20px;
+    }
+    .eduContent p {
+        padding: 10px;
+    }
+    .eduContent img{
+        width: 50%;
+    }
+    .skill-items {
+        padding: 5px 30px;
+    }
+    .expContent ul {
+        padding-left: 0px;
+        /* padding: 0px 10px; */
+    }
+    #projects .heading h1 {
+        margin: 10px 0px 30px 0px;
+    }
+    #projects .box-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box {
+        margin: 10px;
+    }
+    .box-main {
+        padding-left: 0px !important;
+    }
+    .desc p {
+        margin: 10px 0;
+    }
+
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer ul li {
+        padding: 5px;
+    }
+    .copyright {
+        padding: 20px 10px 10px 10px !important;
+    }
+}
+/* media query ends.......... */
