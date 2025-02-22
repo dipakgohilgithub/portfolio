@@ -30,24 +30,29 @@ span {
     color:var(--color-hight);
 }
 
-.container, .container-fluid {
-    padding-top: 80px;
+.theme {
+    background-color: var(--theme-color);
 }
+/* .container, .container-fluid {
+    padding-top: 80px;
+} */
 
 hr {
-    color: white !important;
+    color: var(--text-color) !important;
     margin: 0px !important;
 }
 
 /*  header start ........ */
 .header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #000;
+    background-color: var(--theme-color);
     width: 100%;
-    position: fixed;
     z-index: 100;
+    color: var(--text-color);
 }
 
 .header .logo {
@@ -66,7 +71,7 @@ hr {
 .nav-list li a{
     padding: 10px;
     margin: 10px;
-    color: white;
+    color: inherit;
     font-size: 25px;
     animation: slideTop .10s ease forwards;
     animation-delay: calc(.2s * var(--i));
@@ -81,10 +86,10 @@ hr {
 /* index main body css ...................... */
 /*  personal details ...... */
 #personalDetails {
-    padding: 0px 50px;
+    padding: 20px 50px 50px 50px;
 }
 .detailsContents {
-    color: white;
+    color: var(--text-color);
     font-size: 20px;
 }
 .detailsContents h1 {
@@ -133,10 +138,10 @@ button:hover {
 
 /*  aboutme css starts */
 #aboutMe {
-    padding: 50px;
+    padding: 100px 0px 50px 0px;
 }
 .aboutContent {
-    color: white !important;
+    color: var(--text-color) !important;
 }
 .php-logo img, .aboutContent {
     width: 100%;
@@ -156,8 +161,8 @@ button:hover {
 
 /*  skill educations exp css start */
 #skillEducation {
-    color: white;
-    padding: 0 300px;
+    color: var(--text-color);
+    padding: 100px 300px 0px 300px;
 }
 
 #skillEducation ul {
@@ -198,9 +203,12 @@ button:hover {
 /*  skill educations exp css ends */
 
 /*  projects mywork css start */
+#projects {
+    padding-top: 100px;
+    color: var(--text-color);
+}
 #projects h1 {
     font-size: 3.4rem;
-    color: white;
 }
 
 #projects .box-main {
@@ -215,7 +223,7 @@ button:hover {
     padding: 20px;
     margin: 20px;
     background-color: #1f243d;
-    color: white;
+    color: inherit;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -239,8 +247,8 @@ button:hover {
 
 /*  footer css start............. */
 .footer {
-    background-color: black;
-    color: white;
+    /* background-color: black; */
+    color: var(--text-color);
 }
 
 .footer-items {
@@ -284,7 +292,9 @@ button:hover {
     }
 
     #personalDetails {
-        padding: 0px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px;
     }
 
     .personalImage img {
@@ -411,7 +421,7 @@ button:hover {
     border-radius: 10px;
     width: 100%;
     height: 5px;
-    background-color: white;
+    background-color: var(--text-color);
     animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
     transform: scaleX(0);
     transform-origin: left;
@@ -481,7 +491,7 @@ button:hover {
     position: absolute;
     background-color: #617CBE;
     padding: 1px 8px;
-    color: black;
+    color: var(--text-color);
     font-size: 12px;
     border-radius: 3px;
     top: -28px;
@@ -534,7 +544,7 @@ button:hover {
     border: 7px solid transparent;
     border-bottom-width: 0px;
     border-right-width: 0px;
-    border-top-color: black;
+    border-top-color: var(--text-color);
     top: -10px;
     right: 0;
     animation: showText 0.5s 1.5s linear forwards;
