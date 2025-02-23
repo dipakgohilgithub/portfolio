@@ -9,11 +9,16 @@
 :root {
     --color-hight: red ;
     --theme-color: black;
-    --header-background: black;
-    /* --header-background: rgba(0, 0, 0, 0.5); */
-    --header-color: white;
     /* --theme-color: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%); */
     /* --theme-color: linear-gradient(40deg,#5db4e4 0,#1986c1 40%,#5db4e4 70%,#1986c1 100%); */
+
+    --header-background: black;
+    --header-color: white;
+    /* --header-background: rgba(0, 0, 0, 0.5); */
+
+    --footer-background: var(--header-background);
+    --footer-color: var(--header-color);
+
     --text-color: white;
     --transition-sec: 0.5s;
 }
@@ -247,8 +252,10 @@ hr {
 
 /*  footer css start.............................. */
 .footer {
-    color: var(--text-color);
+    background: var(--footer-background);
+    color: var(--footer-color);
     padding-top: 20px;
+    margin-top: 10px;
 }
 .footer-items {
     padding: 50px 0px;
