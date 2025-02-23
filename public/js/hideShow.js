@@ -21,3 +21,6 @@ function navTogglerBtn() {
         showId.style.display = 'none';
     }
 }
+
+//  all animation run this init and link tag
+AOS.init();
