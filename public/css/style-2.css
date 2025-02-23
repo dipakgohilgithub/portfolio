@@ -8,9 +8,10 @@
 /* global declared start.............................. */
 :root {
     --color-hight: red ;
-    --theme-color: black;
+    --theme-color:black;
     /* --theme-color: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%); */
-    /* --theme-color: linear-gradient(40deg,#5db4e4 0,#1986c1 40%,#5db4e4 70%,#1986c1 100%); */
+    --dashboard-theme-color:linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%);
+    --dashboard-text-color:black;
 
     --header-background: black;
     --header-color: white;
@@ -227,15 +228,15 @@ hr {
     align-items: center;
     padding: 20px;
     margin: 20px;
-    background-color: #1f243d;
+    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%) !important;
     color: inherit;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 .box:hover {
-    border-radius: 20px;
-    box-shadow: 0 0 20px  #617CBE;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #3cdda5 !important;;
     transition: var(--transition-sec);
 }
 
@@ -607,17 +608,17 @@ hr {
 .card {
     justify-content: center;
     align-items: center;
-    background-color: #282828 !important;
-    color: var(--text-color) !important;
+    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%) !important;
+    color: white !important;
     height: 300px !important;
-}
+}    
 .card-title {
     width: 100%;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--text-color);
 }
 .card i {
-    color: #A38277;
+    color:rgb(45 217 102);
     margin-right: 5px;
 }
 .card-icon {
@@ -628,11 +629,11 @@ hr {
     width: 80%;
 }
 .btn-custom {
-    background-color: #333 !important;
+    background-color: #226B5F !important;
     color: #fff !important;
 }
 .btn-custom:hover {
-    background-color: #444 !important;
+    background-color: #5ba297 !important;
 }
 /* card ends ............... */
 
@@ -647,6 +648,9 @@ hr {
     }
     .card-text {
         width: 80%;
+    }
+    .page_under_construction {
+        padding-top: 20px;
     }
 }
 /* media query mobile Dashboard ends ................. */
