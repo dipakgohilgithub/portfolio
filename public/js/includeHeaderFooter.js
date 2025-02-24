@@ -1,4 +1,4 @@
-function includeHTML(elementId, filePath) {
+function includeHeaderFooter(elementId, filePath) {
     // Fetch the content from the external file
     fetch(filePath)
         .then(response => response.text())

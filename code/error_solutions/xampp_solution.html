@@ -6,50 +6,24 @@
     <title>Dipak Portfolio</title>
     <link rel="icon" href="../../public/images/config/web-icon.ico">
 
-    <link rel="stylesheet" href="../../public/css/style-2.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
     <link rel="stylesheet" href="../../public/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href='../../public/font_awesome/css/all.css'>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href='../../public/font_awesome/css/all.css'>
     
+    <script src="../../public/bootstrap/bootstrap.js" ></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../../public/bootstrap/bootstrap.js" ></script>
+
+    <script src="../../public/js/includeHeaderFooter.js"></script>
+    <script>
+            includeHeaderFooter('header', '../../elements/header3.html');
+            includeHeaderFooter('footer', '../../elements/footer3.html');
+    </script>
 </head>
 <body class="theme">
     
-    <header id="header">
-        <div class="main-header">
-            <div class="logo">
-                <a href="#"><img src="../../public/images/config/logo.png" alt=""></a>
-            </div>
-            <div class="main-header-list-items">
-                <ul>
-                    <li> <a href="../../index.html">Home </a></li>
-                    <li> <a href="../dashboard.html">Coding's </a></li>
-                    <li> <a href="../../index.html#skillEducation">Skill </a></li>
-                    <li> <a href="../../index.html#projects">My Work </a></li>
-                    <li> <a href="../../index.html#aboutMe">About Me </a></li>
-                    <li > <a href="../../index.html#ContactMe">Contact Me </a></li>
-                </ul>
-            </div> 
-        </div>
-        <div class="header-responsive">
-            <div class="logo-toggler">
-                <a href="#/"><img src="../../public/images/config/logo.png" alt=""></a>
-                <i class='fa-solid fa-bars' onclick="navTogglerBtn()"></i>
-            </div><hr>
-            <div class="col header-responsive-list-items" style="display: none;">
-                <ul>
-                    <li> <a href="../../index.html">Home </a></li>
-                    <li> <a href="../dashboard.html"> Coding's </a></li>
-                    <li> <a href="../../index.html#skillEducation">Skill </a></li>
-                    <li> <a href="../../index.html#projects">My Work </a></li>
-                    <li> <a href="../../index.html#aboutMe">About Me </a></li>
-                    <li> <a href="../../index.html#ContactMe">Contact Me </a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <header id="header"></header>
 
     <div class="container">
         <div class="row">
@@ -63,42 +37,8 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <hr>
-        <div class="footer-items" id="ContactMe">
-            <div class="row">
-                <h1 class="text-center">Contact <span>Me</span><i class="fa-solid fa-handshake"></i></h1>
-            </div>
-            <div class="row" data-aos="fade-up">
-                <ul>
-                    <li> 
-                        <a target="__blank" href="https://www.linkedin.com/in/dipak-gohil-828242270"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                    </li>
-                    <li> 
-                        <a target="__blank" href="https://github.com/dipakgohilgithub"> <i class="fa-brands fa-github"></i> Github</a>
-                    </li>
-                    <li> 
-                        <a target="__blank" href="mailto:dipakgohil7273@gmail.com"> <i class="fa-regular fa-envelope"></i> Gmail</a>
-                    </li>
-                    <li> 
-                        <a target="__blank" href="tel:7878739362"> <i class="fa-solid fa-phone"></i> Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    
-        <hr>
-        <div class="row text-center copyright">
-            <div class="col-8 col-lg-6">
-                <p>Thanks You For Visit...&#128522;</p>
-            </div>
-            <div class="col-4 col-lg-6">
-                <p> ~ Dipak Gohil</p>
-            </div>
-        </div>
-    </footer>
+    <footer id="footer"></footer>
 
     <script src="../../public/js/hideShow.js"></script>
-    <script src="../../public/js/CopyClipBord.js"></script>
 </body>
 </html>

@@ -6,16 +6,21 @@
     <title>Dipak Portfolio</title>
     <link rel="icon" href="../public/images/config/web-icon.ico">
 
-    <link rel="stylesheet" href="../public/css/style-2.css">
+    <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="../public/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href='../public/font_awesome/css/all.css'>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href='../public/font_awesome/css/all.css'>
     
+    <script src="../public/bootstrap/bootstrap.js" ></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../public/bootstrap/bootstrap.js" ></script>
-</head>
 
+    <script src="../public/js/includeHeaderFooter.js"></script>
+    <script>
+            includeHeaderFooter('header', '../elements/header2.html');
+            includeHeaderFooter('footer', '../elements/footer2.html');
+    </script>
+</head>
 <body class="theme">
 
     <header id="header"></header>
@@ -66,7 +71,7 @@
                             Validation for Database Connection
                         </p>
                          <div class="d-flex gap-4 mt-2">
-                            <a href="database_connection/database_connection_basic.html" class="btn btn-custom"><i class="fa-solid fa-file"></i> View Code</a>
+                            <a href="mysql_database/database_connection_basic.html" class="btn btn-custom"><i class="fa-solid fa-file"></i> View Code</a>
                             <a href="#/" class="btn btn-custom"><i class="fa-solid fa-book-open-reader"></i> Read more</a>
                         </div>
                     </div>
@@ -100,12 +105,6 @@
     </div>
 
     <footer id="footer"></footer>
-
-    <script src="../public/js/includeHeaderFooter.js"></script>
-    <script>
-          includeHTML("header", "../elements/header2.html");
-          includeHTML("footer", "../elements/footer2.html");
-    </script>
 
     <script src="../public/js/hideShow.js"></script>
 </body>
