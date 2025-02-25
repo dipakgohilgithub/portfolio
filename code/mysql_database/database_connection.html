@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipak Portfolio</title>
+    <link rel="icon" href="../../public/images/config/web-icon.ico">
+
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href='../../public/font_awesome/css/all.css'>
+    
+    <script src="../../public/bootstrap/bootstrap.js" ></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="../../public/js/includeHeaderFooter.js"></script>
+    <script>
+            includeHeaderFooter('header', '../../elements/header3.html');
+            includeHeaderFooter('footer', '../../elements/footer3.html');
+    </script>
+</head>
+<body class="theme">
+    
+    <header id="header"></header>
+
+    <div class="container">
+        <div class="row">
+            <h2 class="title">Mysql Database Connections simple</h1>
+        </div>
+
+        <div class="roww">
+            <div class="contents">
+                <p>Hey,</p>
+                <p>First create a .php file for database connection.</p>
+                <div class="step">
+                    Example 1: MySqQL Create a class below listed.
+                </div>
+                <div class="code-box">
+                    <div class="code-box-head">
+                        <h6> Slq Database</h6>
+                        <button class="btn btn-primary copy-btn" onclick="copyCode('sql')"><i class="fa-regular fa-copy"></i>Copy</button>
+                    </div>
+                    <div class="code-box-body">
+<pre id="sql">
+    class DBConnectionService {
+        private $host = "localhost";
+        private $userName = "root";
+        private $password = "";
+        private $db = "db_name";
+        private $con;
+        
+        function __contruct() {
+            $this->con = mysqli_connect($this->host, $this->userName, $this->password, $this->db);
+        }
+    
+        function getConnection () {
+            if(!$this->con) {
+                return NULL;
+            } else {
+                return $this->con;
+            }
+        }
+    }
+</pre>  
+                    </div>
+                </div>
+
+                <div class="code-box">
+                    <div class="code-box-head">
+                        <h6> Slq Database Advance</h6>
+                        <button class="btn btn-primary copy-btn" onclick="copyCode('sql')"><i class="fa-regular fa-copy"></i>Copy</button>
+                    </div>
+                    <div class="code-box-body">
+<pre id="sql">
+    require_once("Logs.php");
+    require_once("UtilityService.php");
+    
+    defined('env') or define("env", "LOCAL");
+    
+    if (env == "LOCAL") {
+        define("HOST", "localhost");
+        define("USERNAME", "root");
+        define("PASSWORD", "");
+        define("DBNAME", "trulloy_management");
+    } else if (env == "PROD") {
+        define("HOST", "localhost");
+        define("USERNAME", "tr_super_user");
+        define("PASSWORD", "trulloy@2024");
+        define("DBNAME", "trulloy_management");
+    }
+    
+    class DBConnectionService {
+    
+        private $con = null;
+    
+        function __construct() {
+            // $this->con = mysqli_connect(DBConnectionService::$host, DBConnectionService::$username, DBConnectionService::$password, DBConnectionService::$dbname);
+            $this->con = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME);
+            if (mysqli_connect_errno()) {
+                $this->con = null;
+            } else {
+                $this->updateCount(1);
+                $updateSql = "update connection_count set created = (created + 1) where id = 1";
+                mysqli_query($this->con, $updateSql);
+            }
+        }
+    
+        function getConnection() {
+            if (!$this->con) {
+                return null;
+            } else {
+                return $this->con;
+            }
+        }
+    
+        function __destruct() {
+            if ($this->con != null) {
+                $updateSql = "update connection_count set destroyed = (destroyed + 1) where id = 1";
+                mysqli_query($this->con, $updateSql);
+                $this->updateCount(2);
+                mysqli_close($this->con);
+            }
+        }
+    
+        function exec($sql) {
+            $updateSql = "update connection_count set query = (query + 1) where id = 1";
+            mysqli_query($this->con, $updateSql);
+            $result = mysqli_query($this->con, $sql);
+            $this->updateCount(3);
+            return $result;
+        }
+    
+        function updateCount($type) {
+            // $json = file_get_contents('count.db.json');
+            $json = file_get_contents(UtilityService::getBaseDirectory() . '/services/count.db.json');
+            $val = json_decode($json, true);
+            $create = $val["created"];
+            $destroy = $val["destroyed"];
+            $query = $val["query"];
+            if ($type == 1) {
+                $create = $val["created"] + 1;
+            } else if ($type == 2) {
+                $destroy = $val["destroyed"] + 1;
+            } else {
+                $query = $val["query"] + 1;
+            }
+            // $cb = fopen('count.db.json', 'w');
+            Logs::debug("DBConnection Service - " . UtilityService::getBaseDirectory() . '/services/count.db.json');
+    
+            // $cb = fopen(UtilityService::getBaseDirectory() . '/services/count.db.json', 'w');
+            // fwrite($cb, '{"created":'.$create.',"destroyed":'.$destroy.',"query":'.$query.'}');
+            // fclose($cb);
+        }
+    }
+</pre>
+                    </div>
+                </div>
+                <p>I hope it can help you...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="../../public/js/hideShow.js"></script>
+    <script src="../../public/js/CopyClipBord.js"></script>
+</body>
+</html>
