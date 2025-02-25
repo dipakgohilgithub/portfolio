@@ -9,13 +9,10 @@
 :root {
     --color-hight: red ;
     --theme-color:black;
-    /* --theme-color: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%); */
     --dashboard-theme-color:linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%);
-    --dashboard-text-color:black;
 
     --header-background: black;
     --header-color: white;
-    /* --header-background: rgba(0, 0, 0, 0.5); */
 
     --footer-background: var(--header-background);
     --footer-color: var(--header-color);
@@ -658,16 +655,17 @@ hr {
     .my-table td {
         padding: 10px;
     }
+
+    .code-box {
+        width: 100% !important;
+    }
 }
 /* media query mobile Dashboard ends ................. */
 
 /* Table css start ................. */
-
 .my-table {
+    width: 100%;
     border-radius: 5px;
-    height: 100%;
-    width: 90%;
-    margin: 40px 20px;
     background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%) ;
 }
 .my-table td {
@@ -681,4 +679,63 @@ hr {
     box-shadow: 0 0 10px #30D780;
     transition: var(--transition-sec);
 }
-    /* Table css ends ................. */
+/* Table css ends ................. */
+
+.content {
+    padding: 20px;
+    color: var(--text-color);
+    background-color: #212121;
+}
+
+.code-box {
+    width: 60%;
+    margin: 10px 0px;
+}
+.code-box-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2F2F2F;
+    color: #9B9B9B;
+    border-radius: 5px 5px 0px 0px;
+}
+.code-box-body {
+    background-color: black;
+    border-radius: 0px 0px 5px 5px;
+}
+
+/* pre define step, link, note start */
+.title {
+    padding: 10px 0px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 3px solid #003a26;
+    color: var(--text-color);
+}
+.step {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-left: 14px solid #1e5792 !important;
+    border-right: 14px solid #1e5792 !important;
+    border-radius: 5px;
+    color: #1e5792;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+.link {
+    border-left: 14px solid rgb(85, 181, 109) !important;
+    border-right: 14px solid rgb(85, 181, 109) !important;
+    border-radius: 5px;
+    background-color: rgb(217, 245, 224);
+    padding: 12px 10px;
+    font-size: 18px;
+    margin: 10px 0px
+}
+.link a {
+    color: #1e5792;
+}
+pre {
+    padding: 20px;
+}
+/* pre define step, link, note ends */

@@ -24,115 +24,130 @@
 <body class="theme">
     
     <header id="header"></header>
+    <div class="container">
+        <div class="row">
+            <h2 class="title">Laravel Installation Step</h1>
+        </div>
 
-    <div class="container-fluid">
-        <h1 class="title">Databse Connection Advance</h1>
-        <div class="main_ col-lg-12 d-flex mt-5">
-            <div class="row col-lg-6">
-                <ul>
-                    <li>Step 1 : create services Folder </li>
-                    <li>Step 2 : save file name as java class example : <span class="highlight"> DBConnection.php </span></li>
-                    <li>Step 3 : give class name as file name  ..<span class="note"> class DBConnection { Inside Code } </span> </li>
-                    <li>Step 4 : main page to link this : <span class="code"> &lt? php include_once('DBConnection.php'); ?> </span></li>
-                    <li>Step 5 : Open Xampp Server</li>
-                </ul>
-            </div>
-            <div class="row box col-lg-6">
-                <div class="header-button">
-                    <span class="text-secondary d-flex align-items-center">Database Connection Advance</span>
-                    <div class="btn btn-primary  copy-btn" onclick="copyCode('dbAdvance')"><i class="fa-regular fa-copy"></i>Copy</div>
+        <div class="roww">
+            <div class="content">
+                <p>
+                    Hey,
+                </p>
+                <p>
+                    If you don't have PHP and Composer installed on your local machine, the following commands will install PHP, Composer, and the Laravel installer on Windows:
+                </p>
+                <p>
+                    First check composer or php is installed in your system.
+                </p>
+                <div class="step">
+                    Example 1: Laravel Collection Contains Example
                 </div>
-                <div class="main-box-body">
-                    <code>
-                        <!-- insde span tag used color 
-                            highlight -> yellow color, 
-                            note -> red color,
-                            code -> orange color -->
-        
-<pre id="dbAdvance">
-    require_once("Logs.php");
-    require_once("UtilityService.php");
+                <div class="link">
+                    <span>Read Also :</span>
+                    <a href="#"> Laravel Collection Forget | Remove Item from Collection Laravel</a>
+                </div>
+                <p>
+                    <div class="steps">
+                        Example 1: Laravel Collection Contains Example
+                    </div>
+                </p>
+                <div class="code-box">
+                    <div class="code-box-head">
+                        <h6> php version check</h6>
+                        <button class="btn btn-primary copy-btn" onclick="copyCode('php')"><i class="fa-regular fa-copy"></i>Copy</button>
+                    </div>
+                    <div class="code-box-body">
+<pre id="php">
+require_once("Logs.php");
+require_once("UtilityService.php");
 
-    defined('env') or define("env", "LOCAL");
+defined('env') or define("env", "LOCAL");
 
-    if (env == "LOCAL") {
-        define("HOST", "localhost");
-        define("USERNAME", "root");
-        define("PASSWORD", "");
-        define("DBNAME", "trulloy_management");
-    } else if (env == "PROD") {
-        define("HOST", "localhost");
-        define("USERNAME", "tr_super_user");
-        define("PASSWORD", "trulloy@2024");
-        define("DBNAME", "trulloy_management");
-    }
+if (env == "LOCAL") {
+    define("HOST", "localhost");
+    define("USERNAME", "root");
+    define("PASSWORD", "");
+    define("DBNAME", "trulloy_management");
+} else if (env == "PROD") {
+    define("HOST", "localhost");
+    define("USERNAME", "tr_super_user");
+    define("PASSWORD", "trulloy@2024");
+    define("DBNAME", "trulloy_management");
+}
 
-    class DBConnectionService {
+class DBConnectionService {
 
-        private $con = null;
+    private $con = null;
 
-        function __construct() {
-            // $this->con = mysqli_connect(DBConnectionService::$host, DBConnectionService::$username, DBConnectionService::$password, DBConnectionService::$dbname);
-            $this->con = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME);
-            if (mysqli_connect_errno()) {
-                $this->con = null;
-            } else {
-                $this->updateCount(1);
-                $updateSql = "update connection_count set created = (created + 1) where id = 1";
-                mysqli_query($this->con, $updateSql);
-            }
-        }
-        
-        function getConnection() {
-            if (!$this->con) {
-                return null;
-            } else {
-                return $this->con;
-            }
-        }
-
-        function __destruct() {
-            if ($this->con != null) {
-                $updateSql = "update connection_count set destroyed = (destroyed + 1) where id = 1";
-                mysqli_query($this->con, $updateSql);
-                $this->updateCount(2);
-                mysqli_close($this->con);
-            }
-        }
-
-        function exec($sql) {
-            $updateSql = "update connection_count set query = (query + 1) where id = 1";
+    function __construct() {
+        // $this->con = mysqli_connect(DBConnectionService::$host, DBConnectionService::$username, DBConnectionService::$password, DBConnectionService::$dbname);
+        $this->con = mysqli_connect(HOST, USERNAME, PASSWORD, DBNAME);
+        if (mysqli_connect_errno()) {
+            $this->con = null;
+        } else {
+            $this->updateCount(1);
+            $updateSql = "update connection_count set created = (created + 1) where id = 1";
             mysqli_query($this->con, $updateSql);
-            $result = mysqli_query($this->con, $sql);
-            $this->updateCount(3);
-            return $result;
-        }
-
-        function updateCount($type) {
-            // $json = file_get_contents('count.db.json');
-            $json = file_get_contents(UtilityService::getBaseDirectory() . '/services/count.db.json');
-            $val = json_decode($json, true);
-            $create = $val["created"];
-            $destroy = $val["destroyed"];
-            $query = $val["query"];
-            if ($type == 1) {
-                $create = $val["created"] + 1;
-            } else if ($type == 2) {
-                $destroy = $val["destroyed"] + 1;
-            } else {
-                $query = $val["query"] + 1;
-            }
-            // $cb = fopen('count.db.json', 'w');
-            Logs::debug("DBConnection Service - " . UtilityService::getBaseDirectory() . '/services/count.db.json');
-
-            // $cb = fopen(UtilityService::getBaseDirectory() . '/services/count.db.json', 'w');
-            // fwrite($cb, '{"created":'.$create.',"destroyed":'.$destroy.',"query":'.$query.'}');
-            // fclose($cb);
         }
     }
-</pre>   
-                    </code>
+
+    function getConnection() {
+        if (!$this->con) {
+            return null;
+        } else {
+            return $this->con;
+        }
+    }
+
+    function __destruct() {
+        if ($this->con != null) {
+            $updateSql = "update connection_count set destroyed = (destroyed + 1) where id = 1";
+            mysqli_query($this->con, $updateSql);
+            $this->updateCount(2);
+            mysqli_close($this->con);
+        }
+    }
+
+    function exec($sql) {
+        $updateSql = "update connection_count set query = (query + 1) where id = 1";
+        mysqli_query($this->con, $updateSql);
+        $result = mysqli_query($this->con, $sql);
+        $this->updateCount(3);
+        return $result;
+    }
+
+    function updateCount($type) {
+        // $json = file_get_contents('count.db.json');
+        $json = file_get_contents(UtilityService::getBaseDirectory() . '/services/count.db.json');
+        $val = json_decode($json, true);
+        $create = $val["created"];
+        $destroy = $val["destroyed"];
+        $query = $val["query"];
+        if ($type == 1) {
+            $create = $val["created"] + 1;
+        } else if ($type == 2) {
+            $destroy = $val["destroyed"] + 1;
+        } else {
+            $query = $val["query"] + 1;
+        }
+        // $cb = fopen('count.db.json', 'w');
+        Logs::debug("DBConnection Service - " . UtilityService::getBaseDirectory() . '/services/count.db.json');
+
+        // $cb = fopen(UtilityService::getBaseDirectory() . '/services/count.db.json', 'w');
+        // fwrite($cb, '{"created":'.$create.',"destroyed":'.$destroy.',"query":'.$query.'}');
+        // fclose($cb);
+    }
+}
+</pre>
+                    </div>
                 </div>
+                <div class="note">
+                    hello
+                </div>
+                <p>
+                    I hope it can help you...
+                </p>
             </div>
         </div>
     </div>
