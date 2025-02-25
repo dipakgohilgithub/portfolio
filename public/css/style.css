@@ -659,6 +659,12 @@ hr {
     .code-box {
         width: 100% !important;
     }
+    .step, link {
+        width: 100% !important;
+    }
+    .content p {
+        width: 100% !important;
+    }
 }
 /* media query mobile Dashboard ends ................. */
 
@@ -666,7 +672,7 @@ hr {
 .my-table {
     width: 100%;
     border-radius: 5px;
-    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%) ;
+    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%);
 }
 .my-table td {
     font-weight: bold;
@@ -684,11 +690,13 @@ hr {
 .content {
     padding: 20px;
     color: var(--text-color);
-    background-color: #212121;
+    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%);
 }
-
+.content p {
+    width: 70%;
+}
 .code-box {
-    width: 60%;
+    width: 70%;
     margin: 10px 0px;
 }
 .code-box-head {
@@ -719,9 +727,10 @@ hr {
     border-left: 14px solid #1e5792 !important;
     border-right: 14px solid #1e5792 !important;
     border-radius: 5px;
-    color: #1e5792;
+    color: var(--text-color);
     font-size: 20px;
     margin: 10px 0px;
+    width: 70%;
 }
 .link {
     border-left: 14px solid rgb(85, 181, 109) !important;
@@ -730,7 +739,8 @@ hr {
     background-color: rgb(217, 245, 224);
     padding: 12px 10px;
     font-size: 18px;
-    margin: 10px 0px
+    margin: 10px 0px;
+    width: 70%;
 }
 .link a {
     color: #1e5792;
