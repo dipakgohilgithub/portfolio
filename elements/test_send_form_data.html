@@ -1,0 +1,106 @@
+<hr>
+<div class="container mt-5 contactMe">
+    <div class="row">
+        <div class="contact-left">
+            <h1>Contact Me</h1>
+            <p><i class="fas fa-paper-plane"></i> contact@example.com</p>
+            <p><i class="fas fa-phone"></i> 0123456789</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <button class="btn btn2">Download CV</button>
+        </div>
+        <div class="contact-right">
+            <form name="contact-form-submit">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea rows="6" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+</div>
+<hr class="mt-5">
+<div class="row text-center">
+    <p>Copyright &copy; Diapk. Made with <span style="color: red;">❤</span> by Dipak Gohil</p>
+</div>
+
+<!-- ONLY WORK IN ONE PAGE  -->
+
+<script>
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbw1El05kmJHp-pkt5-1469CXIMEUlJ0hUuDWJx3kq6iZpVCowk5UiZmIJMounnCQg1w8A/exec';
+    const form = document.querySelector('#contact-form-submit');
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptUrl, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = 'Message sent successfully';
+                setTimeout(function () {
+                    msg.innerHTML = '';
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
+</script>
+
+
+<!-- set google sheet and deploy key  -->
+
+
+var sheetName = 'Sheet1'
+var scriptProp = PropertiesService.getScriptProperties()
+
+function intialSetup () {
+  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
+  scriptProp.setProperty('key', activeSpreadsheet.getId())
+}
+
+function doPost (e) {
+  var lock = LockService.getScriptLock()
+  lock.tryLock(10000)
+
+  try {
+    var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
+    var sheet = doc.getSheetByName(sheetName)
+
+    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
+    var nextRow = sheet.getLastRow() + 1
+
+    var newRow = headers.map(function(header) {
+      return header === 'timestamp' ? new Date() : e.parameter[header]
+    })
+
+    sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow])
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'success', 'row': nextRow }))
+      .setMimeType(ContentService.MimeType.JSON)
+  }
+
+  catch (e) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': e }))
+      .setMimeType(ContentService.MimeType.JSON)
+  }
+
+  finally {
+    lock.releaseLock()
+  }
+}
+
+// above code set in google form inside fucntion
+
+
+
+google sheet deploy key 
+
+
+
+https://script.google.com/macros/s/AKfycbw1El05kmJHp-pkt5-1469CXIMEUlJ0hUuDWJx3kq6iZpVCowk5UiZmIJMounnCQg1w8A/exec
