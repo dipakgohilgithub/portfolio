@@ -166,37 +166,41 @@ hr {
 #skillEducation {
     color: var(--text-color);
     padding: 100px 300px 0px 300px;
+    margin-bottom: 10px;
 }
-#skillEducation ul {
-    display: flex;    
-    justify-content: space-between;
-}
-
-.skill-list{
-    padding:20px 0 20px 0;
-}
-
-.skill-list li {
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
 #skillEducation h2 {
     font-size: 50px;
 }
-
-.expContent ul {
-    display: flex;
-    flex-direction: column;
-    /* padding: 30px; */
+.skills-contailer{
+    max-width: 900px;
+    margin : 50px 0px; 
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
-
-.eduContent img{
-    width: 25%;
+.skills-contailer h3 {
+    color: #F76C6C;
+    border-bottom: 2px solid #F76C6C;
+    padding-bottom: 5px;
+    display: inline-block;
 }
-
-.skill-items .content {
-    height: 350px;
+.skills-container, .edu_exp {
+    margin-top: 20px;
+}
+.skills-contailer .list-group-item {
+    background: linear-gradient(135deg, #112D4E, #3F72AF);
+    color: #E0E0E0;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+.skills-contailer .list-group-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.03);
+}
+.skills-contailer .list-group-item strong {
+    color: #F8C471;
 }
 /*  skill educations exp css ends.............................. */
 
@@ -242,14 +246,12 @@ hr {
 }
 
 #projects .card-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
+    height: 100px;
 }
-
 
 /*  projects mywork css ends.............................. */
 
@@ -379,21 +381,8 @@ hr {
         padding-bottom: 10px;
         margin: 0;
     }
-    .skill-list{
-        padding: 20px;
-    }
-    .eduContent p {
-        padding: 10px;
-    }
-    .eduContent img{
-        width: 50%;
-    }
-    .skill-items {
-        padding: 5px 30px;
-    }
-    .expContent ul {
-        padding-left: 0px;
-        /* padding: 0px 10px; */
+    .edu_exp {
+        margin-top: 40px !important;
     }
     #projects .heading h1 {
         margin: 10px 0px 30px 0px;
@@ -491,6 +480,7 @@ hr {
         width: 100% !important;
     }
     .step, link {
+        padding: 2px 10px !important;
         width: 100% !important;
     }
     .content p {
@@ -580,174 +570,3 @@ pre {
     padding: 20px;
 }
 /* pre define step, link, note ends */
-
-
-/* progress bar start.............................. */
-.technical-bars {
-    align-items: center;
-}
-
-.technical-bars .bar {
-    margin-top: 20px 0;
-}
-
-.technical-bars .bar:first-child {
-    margin-top: 0;
-}
-
-.technical-bars .bar:last-child {
-    margin-bottom: 0;
-}
-
-.technical-bars .bar .info {
-    margin-bottom: 5px;
-}
-
-.technical-bars .bar .info span {
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-
-.technical-bars .bar .progress-line {
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 5px;
-    background-color: var(--text-color);
-    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-@keyframes animate {
-    100% {
-        transform: scaleX(1);
-    }
-}
-
-.technical-bars .bar .progress-line span {
-    height: 100%;
-    position: absolute;
-    border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-.progress-line.html span {
-    width: 80%;
-    background-color: #DD4B25;
-}
-
-.progress-line.css span {
-    width: 80%;
-    background-color: #147bbc;
-}
-
-.progress-line.javascript span {
-    width: 60%;
-    background-color: burlywood;
-}
-
-.progress-line.jquery span {
-    width: 40%;
-    background-color: burlywood;
-}
-
-.progress-line.bootstrap span {
-    width: 65%;
-    background-color: #b0b;
-}
-
-.progress-line.github span {
-    width: 72%;
-    background-color: grey;
-}
-
-.progress-line.php span {
-    width: 70%;
-    background-color: #617CBE;
-}
-
-.progress-line.android span {
-    width: 50%;
-    background-color: #30D780;
-}
-
-.progress-line.python span {
-    width: 60%;
-    background-color: blueviolet;
-}
-
-.progress-line span::after {
-    position: absolute;
-    background-color: #617CBE;
-    padding: 1px 8px;
-    color: var(--text-color);
-    font-size: 12px;
-    border-radius: 3px;
-    top: -28px;
-    right: -20px;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
-}
-
-.progress-line.html span::after {
-    content: "80%";
-}
-
-.progress-line.css span::after {
-    content: "80%";
-}
-
-.progress-line.javascript span::after {
-    content: "60%";
-}
-
-.progress-line.jquery span::after {
-    content: "40%";
-}
-
-.progress-line.bootstrap span::after {
-    content: "65%";
-}
-
-.progress-line.github span::after {
-    content: "72%";
-}
-
-.progress-line.php span::after {
-    content: "70%";
-}
-
-.progress-line.android span::after {
-    content: "50%";
-}
-
-.progress-line.python span::after {
-    content: "60%";
-}
-
-.progress-line span::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color: var(--text-color);
-    top: -10px;
-    right: 0;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
-}
-
-@keyframes showText {
-    100% {
-        opacity: 1;
-    }
-}
-/* progress bar ends.............................. */

@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script src="../../public/js/includeHeaderFooter.js"></script>
+    <script src="../../public/js/main.js"></script>
     <script>
             includeHeaderFooter('header', '../../elements/header3.html');
             includeHeaderFooter('footer', '../../elements/footer3.html');
@@ -53,7 +53,20 @@
     </div>
 
     <footer id="footer"></footer>
+    <script>
+         // hide and show div uisng href id (links page)....................
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none'); 
 
-    <script src="../../public/js/hideShow.js"></script>
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetSection = document.getElementById(hash);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
+            }
+        });
+    </script>
 </body>
 </html>
