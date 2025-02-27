@@ -208,39 +208,49 @@ hr {
 #projects h1 {
     font-size: 3.4rem;
 }
-
-#projects .box-main {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 0px 150px;
+#projects .box {
+    padding: 20px 20px;
 }
-.box {
-    width: 350px;
-    height: 450px;
-    align-items: center;
-    padding: 20px;
-    margin: 20px;
+#projects .col {
+    margin-top: 10px;
+}
+#projects .card {
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
     background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%) !important;
-    color: inherit;
-    border-radius: 10px;
-    cursor: pointer;
+    color: black;
 }
 
-.box:hover {
-    border-radius: 5px;
-    box-shadow: 0 0 20px #3cdda5 !important;;
-    transition: var(--transition-sec);
+#projects .card-body {
+    flex-grow: 1; 
+    overflow: hidden;
+} 
+
+#projects .card-img-top {
+    border-bottom: 2px solid #ddd;
+}
+#projects .badge {
+    font-size: 0.9rem;
+}
+#projects .tech-stack {
+    gap: 10px;
 }
 
-.box h1 {
-    font-size: 25px !important;
+.badge {
+    color:black !important;
 }
 
-#projects img {
-    padding: 10px;
-    width: 250px;
-    border-radius: 15px;
+#projects .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
+
+
 /*  projects mywork css ends.............................. */
 
 /*  footer css start.............................. */
@@ -278,6 +288,299 @@ hr {
     padding-top: 10px;
 }
 /* footer css ends.............................. */
+
+/* media query mobile Index Page start............ */
+@media(max-width:540px){
+    
+    .main-header {
+        display: none;
+    }
+    .header-responsive {
+        display: inline-block;
+    }
+    .header-responsive {
+        position: sticky;
+        top: 0;
+        display: block;
+        background-color: #212529;
+        color: var(--text-color);
+        z-index: 100;
+    }
+    .header-responsive .logo-toggler {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+    }
+    .header-responsive .logo-toggler img {
+        height: 50px;
+        width: 100px;
+    }
+    .header-responsive .logo-toggler i {
+        border: 1px solid var(--text-color);
+        border-radius: 6px;
+        font-size: 20px;
+        padding: 5px 15px;
+        width: 50px;
+        margin-top: 10px;
+        height: 30px;
+        color: var(--text-color);
+    }
+    .header-responsive-list-items {
+        justify-items: center;
+    }
+    .header-responsive-list-items ul li {
+        padding: 5px 0px;
+    }
+    .header-responsive-list-items ul li a {
+        font-size: 25px;
+        color: var(--text-color);
+    }
+
+    .container-fluid {
+        padding-left: 0px !important;
+    }
+
+    #personalDetails {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 30px;
+    }
+    .personalImage img {
+        height: 300px;
+        width: 300px;
+    }
+    #personalDetails button {
+        margin: 10px 0 30px 0px !important;
+    }
+
+    .detailsContents p{
+        width: 100%;
+    }
+    .php-logo img {
+        display: none;
+    }
+    #aboutMe {
+        padding: 10px 0px !important;
+    }
+    #aboutMe h1, #aboutMe h3 {
+        text-align: center;
+        padding: 10px 0px !important;
+    }
+    .aboutContent p{
+        margin: 0px 20px 20px 20px;
+        font-size: 15px;
+    }
+
+    #skillEducation {
+        padding: 0;
+    }
+    #skillEducation h2 {
+        font-size: 35px;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+    .skill-list{
+        padding: 20px;
+    }
+    .eduContent p {
+        padding: 10px;
+    }
+    .eduContent img{
+        width: 50%;
+    }
+    .skill-items {
+        padding: 5px 30px;
+    }
+    .expContent ul {
+        padding-left: 0px;
+        /* padding: 0px 10px; */
+    }
+    #projects .heading h1 {
+        margin: 10px 0px 30px 0px;
+    }
+    .desc p {
+        margin: 10px 0;
+    }
+
+    #footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #footer ul li {
+        padding: 5px;
+    }
+    .copyright {
+        padding: 20px 10px 10px 10px !important;
+    }
+    #projects .row  {
+        display: flex;
+        flex-direction: column;
+    } 
+}
+/* media query mobile Index Page ends............. */
+
+
+/* dashboard css ............. */
+
+/* card start ............... */
+.card-container {
+    padding: 0px 150px;
+}
+.card-container .card {
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%) !important;
+    color: var(--text-color) !important;
+    height: 300px !important;
+}    
+.card-container .card:hover {
+    box-shadow: 0 0 20px #30D780;
+    font-size: 17px;
+    transition: var(--transition-sec);
+}
+.card-container .card-title {
+    font-weight: bold;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--text-color);
+}
+.card-container .card i {
+    color:rgb(45 217 102);
+    margin-right: 5px;
+}
+.card-container .card-icon {
+    font-size: 24px;
+}
+.card-container .card-text {
+    height: 40%;
+    width: 80%;
+}
+.card-container .card .btn-custom {
+    background-color: #226B5F !important;
+    color: #fff !important;
+}
+.card-container .card .btn-custom:hover {
+    background-color: #5ba297 !important;
+    box-shadow: 0 0 10px #30D780;
+    transition: var(--transition-sec);
+}
+/* card ends ............... */
+
+
+/* media query mobile Dashboard start ................. */
+@media(max-width:540px) {
+    .card-container {
+        padding: 0px 10px 0px 20px;
+    }
+    .card-container .card-title {
+        width: 100%;
+    }
+    .card-container .card-text {
+        width: 80%;
+    }
+    .page_under_construction {
+        padding-top: 20px;
+    }
+
+    .my-table td {
+        padding: 10px;
+    }
+
+    .code-box {
+        width: 100% !important;
+    }
+    .step, link {
+        width: 100% !important;
+    }
+    .content p {
+        width: 100% !important;
+    }
+}
+/* media query mobile Dashboard ends ................. */
+
+/* Table css start ................. */
+.my-table {
+    width: 100%;
+    border-radius: 5px;
+    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%);
+}
+.my-table td {
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+.my-table tr:hover {
+    background-color: #045538 !important;
+    box-shadow: 0 0 10px #30D780;
+    transition: var(--transition-sec);
+}
+/* Table css ends ................. */
+
+.contents {
+    padding: 20px;
+    color: var(--text-color);
+    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%);
+}
+.content p {
+    width: 70%;
+}
+.code-box {
+    width: 70%;
+    margin: 10px 0px;
+}
+.code-box-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2F2F2F;
+    color: #9B9B9B;
+    border-radius: 5px 5px 0px 0px;
+}
+.code-box-body {
+    background-color: black;
+    border-radius: 0px 0px 5px 5px;
+}
+
+/* pre define step, link, note start */
+.title {
+    padding: 10px 0px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 3px solid #003a26;
+    color: var(--text-color);
+}
+.step {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-left: 14px solid #1e5792 !important;
+    border-right: 14px solid #1e5792 !important;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 20px;
+    margin: 10px 0px;
+    width: 70%;
+}
+.link {
+    border-left: 14px solid rgb(85, 181, 109) !important;
+    border-right: 14px solid rgb(85, 181, 109) !important;
+    border-radius: 5px;
+    background-color: rgb(217, 245, 224);
+    padding: 12px 10px;
+    font-size: 18px;
+    margin: 10px 0px;
+    width: 70%;
+}
+.link a {
+    color: #1e5792;
+}
+pre {
+    padding: 20px;
+}
+/* pre define step, link, note ends */
+
 
 /* progress bar start.............................. */
 .technical-bars {
@@ -448,303 +751,3 @@ hr {
     }
 }
 /* progress bar ends.............................. */
-
-/* media query mobile Index Page start............ */
-@media(max-width:540px){
-    
-    .main-header {
-        display: none;
-    }
-    .header-responsive {
-        display: inline-block;
-    }
-    .header-responsive {
-        position: sticky;
-        top: 0;
-        display: block;
-        background-color: #212529;
-        color: var(--text-color);
-        z-index: 100;
-    }
-    .header-responsive .logo-toggler {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 20px;
-    }
-    .header-responsive .logo-toggler img {
-        height: 50px;
-        width: 100px;
-    }
-    .header-responsive .logo-toggler i {
-        border: 1px solid var(--text-color);
-        border-radius: 6px;
-        font-size: 20px;
-        padding: 5px 15px;
-        width: 50px;
-        margin-top: 10px;
-        height: 30px;
-        color: var(--text-color);
-    }
-    .header-responsive-list-items {
-        justify-items: center;
-    }
-    .header-responsive-list-items ul li {
-        padding: 5px 0px;
-    }
-    .header-responsive-list-items ul li a {
-        font-size: 25px;
-        color: var(--text-color);
-    }
-
-    .container-fluid {
-        padding-left: 0px !important;
-    }
-
-    #personalDetails {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 10px 30px;
-    }
-    .personalImage img {
-        height: 300px;
-        width: 300px;
-    }
-    #personalDetails button {
-        margin: 10px 0 30px 0px !important;
-    }
-
-    .detailsContents p{
-        width: 100%;
-    }
-    .php-logo img {
-        display: none;
-    }
-    #aboutMe {
-        padding: 10px 0px !important;
-    }
-    #aboutMe h1, #aboutMe h3 {
-        text-align: center;
-        padding: 10px 0px !important;
-    }
-    .aboutContent p{
-        margin: 0px 20px 20px 20px;
-        font-size: 15px;
-    }
-
-    #skillEducation {
-        padding: 0;
-    }
-    #skillEducation h2 {
-        font-size: 35px;
-        padding-bottom: 10px;
-        margin: 0;
-    }
-    .skill-list{
-        padding: 20px;
-    }
-    .eduContent p {
-        padding: 10px;
-    }
-    .eduContent img{
-        width: 50%;
-    }
-    .skill-items {
-        padding: 5px 30px;
-    }
-    .expContent ul {
-        padding-left: 0px;
-        /* padding: 0px 10px; */
-    }
-    #projects .heading h1 {
-        margin: 10px 0px 30px 0px;
-    }
-    #projects .box-main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .box {
-        margin: 10px;
-    }
-    .box-main {
-        padding-left: 0px !important;
-    }
-    .desc p {
-        margin: 10px 0;
-    }
-
-    #footer ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #footer ul li {
-        padding: 5px;
-    }
-    .copyright {
-        padding: 20px 10px 10px 10px !important;
-    }
-}
-/* media query mobile Index Page ends............. */
-
-
-/* dashboard css ............. */
-
-
-/* card start ............... */
-.card-container {
-    padding: 0px 150px;
-}
-.card {
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%) !important;
-    color: var(--text-color) !important;
-    height: 300px !important;
-}    
-.card:hover {
-    box-shadow: 0 0 20px #30D780;
-    font-size: 17px;
-    transition: var(--transition-sec);
-}
-.card-title {
-    font-weight: bold;
-    width: 100%;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--text-color);
-}
-.card i {
-    color:rgb(45 217 102);
-    margin-right: 5px;
-}
-.card-icon {
-    font-size: 24px;
-}
-.card-text {
-    height: 40%;
-    width: 80%;
-}
-.btn-custom {
-    background-color: #226B5F !important;
-    color: #fff !important;
-}
-.btn-custom:hover {
-    background-color: #5ba297 !important;
-    box-shadow: 0 0 10px #30D780;
-    transition: var(--transition-sec);
-}
-/* card ends ............... */
-
-
-/* media query mobile Dashboard start ................. */
-@media(max-width:540px) {
-    .card-container {
-        padding: 0px 10px 0px 20px;
-    }
-    .card-title {
-        width: 100%;
-    }
-    .card-text {
-        width: 80%;
-    }
-    .page_under_construction {
-        padding-top: 20px;
-    }
-
-    .my-table td {
-        padding: 10px;
-    }
-
-    .code-box {
-        width: 100% !important;
-    }
-    .step, link {
-        width: 100% !important;
-    }
-    .content p {
-        width: 100% !important;
-    }
-}
-/* media query mobile Dashboard ends ................. */
-
-/* Table css start ................. */
-.my-table {
-    width: 100%;
-    border-radius: 5px;
-    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%);
-}
-.my-table td {
-    font-weight: bold;
-    color: var(--text-color);
-    padding: 10px;
-    border-bottom: 2px solid black;
-}
-.my-table tr:hover {
-    background-color: #045538 !important;
-    box-shadow: 0 0 10px #30D780;
-    transition: var(--transition-sec);
-}
-/* Table css ends ................. */
-
-.contents {
-    padding: 20px;
-    color: var(--text-color);
-    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%);
-}
-.content p {
-    width: 70%;
-}
-.code-box {
-    width: 70%;
-    margin: 10px 0px;
-}
-.code-box-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #2F2F2F;
-    color: #9B9B9B;
-    border-radius: 5px 5px 0px 0px;
-}
-.code-box-body {
-    background-color: black;
-    border-radius: 0px 0px 5px 5px;
-}
-
-/* pre define step, link, note start */
-.title {
-    padding: 10px 0px;
-    margin-bottom: 40px;
-    text-align: center;
-    border-bottom: 3px solid #003a26;
-    color: var(--text-color);
-}
-.step {
-    padding: 10px 20px;
-    border: 1px solid white;
-    border-left: 14px solid #1e5792 !important;
-    border-right: 14px solid #1e5792 !important;
-    border-radius: 5px;
-    color: var(--text-color);
-    font-size: 20px;
-    margin: 10px 0px;
-    width: 70%;
-}
-.link {
-    border-left: 14px solid rgb(85, 181, 109) !important;
-    border-right: 14px solid rgb(85, 181, 109) !important;
-    border-radius: 5px;
-    background-color: rgb(217, 245, 224);
-    padding: 12px 10px;
-    font-size: 18px;
-    margin: 10px 0px;
-    width: 70%;
-}
-.link a {
-    color: #1e5792;
-}
-pre {
-    padding: 20px;
-}
-/* pre define step, link, note ends */
