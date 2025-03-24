@@ -445,11 +445,11 @@ hr {
     height: 40%;
     width: 80%;
 }
-.card-container .card .btn-custom {
+.btn-custom{
     background-color: #226B5F !important;
     color: #fff !important;
 }
-.card-container .card .btn-custom:hover {
+.btn-custom:hover {
     background-color: #5ba297 !important;
     box-shadow: 0 0 10px #30D780;
     transition: var(--transition-sec);
