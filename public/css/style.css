@@ -229,7 +229,11 @@ hr {
 #projects .card-body {
     flex-grow: 1; 
     overflow: hidden;
+    color: lightgrey !important;
 } 
+#projects .card-body .text-muted {
+    color: lightgrey !important;
+}
 
 #projects .card-img-top {
     border-bottom: 2px solid #ddd;
@@ -493,18 +497,13 @@ hr {
 .my-table {
     width: 100%;
     border-radius: 5px;
-    background: linear-gradient(40deg,#227155 0,#003a26 40%,#227155 70%,#0c563c 100%);
+    background-color: #045538 !important;
 }
 .my-table td {
     font-weight: bold;
     color: var(--text-color);
     padding: 10px;
     border-bottom: 2px solid black;
-}
-.my-table tr:hover {
-    background-color: #045538 !important;
-    box-shadow: 0 0 10px #30D780;
-    transition: var(--transition-sec);
 }
 /* Table css ends ................. */
 
@@ -570,3 +569,13 @@ pre {
     padding: 20px;
 }
 /* pre define step, link, note ends */
+
+/* pre define Page under construction image start */
+.page_under_construction_img {
+    height: 50vh;
+    background-image: url('../../public/images/config/page-under-construction.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+}
+/* pre define Page under construction image ends */
