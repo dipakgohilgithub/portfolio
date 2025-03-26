@@ -579,3 +579,21 @@ pre {
     background-size: contain; 
 }
 /* pre define Page under construction image ends */
+
+.git-table {
+    margin: 0 auto; 
+    width: 80%;
+    text-align: left;
+    color: white;
+}
+
+.git-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.git-table .fs{
+    margin-top: 0px;
+}
+.git-table h3 {
+    margin-top: 50px;
+}

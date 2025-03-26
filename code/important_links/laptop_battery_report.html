@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipak Portfolio</title>
+    <link rel="icon" href="../../public/images/config/web-icon.ico">
+
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href='../../public/font_awesome/css/all.css'>
+    
+    <script src="../../public/bootstrap/bootstrap.js" ></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="../../public/js/main.js"></script>
+    <script>
+            includeHeaderFooter('header', '../../elements/header3.html');
+            includeHeaderFooter('footer', '../../elements/footer3.html');
+    </script>
+</head>
+<body class="theme">
+    
+    <header id="header"></header>
+
+    <div class="container">
+        <section id="battryReport" class="content-section">
+            <div class="row">
+                <h2 class="title">Laptop Battery Rreport </h1>
+            </div>
+    
+            <div class="contents">
+                <p> Step 1 : open CMD  </p>
+                <p> Step 2 : type: <span> powercfg/batteryreport </span></p>
+                <p> Step 3 : its generate URL copy that path and past it in file explorer URL / Any Browser URL. </p>
+                <p> Step 4 : example of Path: <span> C:\Users\pc\battery-report.html. </span></p>
+                <p> Step 5 : Direct Hit path to access report: <span> C:\Users\pc\battery-report.html. </span></p>
+                <p>I hope it can help you...</p>
+            </div>
+        </section>
+    </div>
+
+    <footer id="footer"></footer>
+    <script>
+            // hide and show div uisng href id (links page)....................
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none'); 
+
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetSection = document.getElementById(hash);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

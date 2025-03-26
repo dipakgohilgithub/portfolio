@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipak Portfolio</title>
+    <link rel="icon" href="../../public/images/config/web-icon.ico">
+
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href='../../public/font_awesome/css/all.css'>
+    
+    <script src="../../public/bootstrap/bootstrap.js" ></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="../../public/js/main.js"></script>
+    <script>
+            includeHeaderFooter('header', '../../elements/header3.html');
+            includeHeaderFooter('footer', '../../elements/footer3.html');
+    </script>
+</head>
+<body class="theme">
+    
+    <header id="header"></header>
+
+    <div class="container">
+        <div class="row">
+            <h2 class="title">
+                Git Commands
+            </h2>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table-striped git-table">
+                    <thead>
+                        <tr class="git-table">
+                            <td colspan="2"><h3 class="fs">Git Token Access For Pull And Push</h3></td>
+                        </tr>
+                       
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>git init</td>
+                            <td>Initialization the git repository.</td>
+                        </tr>
+                        <tr>
+                            <td>git config --global <span>user_name</span></td>
+                            <td>Set username for git globaly.</td>
+                        </tr>
+                        <tr>
+                            <td>git config --global <span>user_email</span></td>
+                            <td>Set useremail for git globally.</td>
+                        </tr>
+                        <tr>
+                            <td>git remote add origin <span>url</span></td>
+                            <td>Set git account.</td>
+                        </tr>
+                        <tr>
+                            <td>git remote set-url origin <span>url</span></td>
+                            <td>Set remote url.</td>
+                        </tr>
+        
+                        <tr class="git-table">
+                           <td colspan="2"><h3>Git Repository Commands</h3></td> 
+                        </tr>
+        
+                        <tr>
+                            <td>git checkout -b <span>new_branch_name</span></td>
+                            <td>Create new branch in stage.</td>
+                        </tr>
+                        <tr>
+                            <td>git checkout <span>branch_name</span></td>
+                            <td>Change branch.</td>
+                        </tr>
+                        <tr>
+                            <td>git branch -d <span>branch_name</span></td>
+                            <td>Delete branch in local stage.</td>
+                        </tr>
+                        <tr>
+                            <td>git add <span>file_name</span></td>
+                            <td>Add new file to stage.</td>
+                        </tr>
+                        <tr>
+                            <td>git add <span class="gitpage-dot">.</span></td>
+                            <td>Add all files to stage.</td>
+                        </tr>
+                        <tr>
+                            <td>git status</td>
+                            <td>Displays the state of the working directory and the staging area.</td>
+                        </tr>
+                        <tr>
+                            <td>git commit -m <span>$commits"</span></td>
+                            <td>Add files changes.</td>
+                        </tr>
+                        <tr>
+                            <td>git reset --soft</td>
+                            <td>Remove commits only.</td>
+                        </tr>
+                        <tr>
+                            <td>git reset --hard</td>
+                            <td>Used to reset the current branch to a previous commit.</td>
+                        </tr>
+                        <tr>
+                            <td>git log -<span>numbers</span></td>
+                            <td>Used to shaw past commits.</td>
+                        </tr>
+        <!--  -->
+                        <tr class="git-table">
+                            <td colspan="2"><h3>Remotes Interaction Commands</h3></td>
+                        </tr>
+        
+                        <tr>
+                            <td>git push origin <span>branch_name</span></td>
+                            <td>Push code to another branch.</td>
+                        </tr>
+                        <tr>
+                            <td>git push origin <span>branch_name</span> -f</td>
+                            <td>Push code force fully and past all code remove.</td>
+                        </tr>
+                        <tr>
+                            <td>git pull origin <span>branch_name</span></td>
+                            <td>Take pull code from another branch.</td>
+                        </tr>
+                        <tr>
+                            <td>git merge <span>branch_name</span></td>
+                            <td>Merge from another branch.</td>
+                        </tr>
+                        <tr>
+                            <td>git diff <span>branch1..branch2</span></td>
+                            <td>Check file changes in master(red).</td>
+                        </tr>
+                        <tr>
+                            <td>git diff-tree --no-commit-id --name-only -r <span>commit</span></td>
+                            <td>File changes in a commit.</td>
+                        </tr>
+                        <tr>
+                            <td>git diff --name-only <span>branch1..branch2</span></td>
+                            <td>Get only file names doff between two branches.</td>
+                        </tr>
+                        <tr>
+                            <td>git cherry pick <span>commithash</span></td>
+                            <td>That will pull just the commit into your current branch.</td>
+                        </tr>
+                        <tr>
+                            <td>git checkout <span>commit/$branch $full_file_path</span></td>
+                            <td>Reset the file to its previous state or branch state.</td>
+                        </tr>
+                        <tr>
+                            <td>git remote set-url origin <span>url</span></td>
+                            <td>Set the remote url.</td>
+                        </tr>
+                        <tr>
+                            <td>git clean -n , git clean -fx</td>
+                            <td>To remove ignored and non-ignored files.</td>
+                        </tr>
+                        <tr class="git-table">
+                            <td colspan="2"><h3>Git stash</h3></td>
+                        </tr>
+                        <tr>
+                            <td>git stash list</td>
+                            <td>To get the list of stash.</td>
+                        </tr>
+                        <tr>
+                            <td>git stash apply <span>stash_name</span></td>
+                            <td>Applies the changes and leaves a copy in the stash.</td>
+                        </tr>
+                        <tr>
+                            <td>git stash pop <span>stash_name</span></td>
+                            <td>Applies the changes and removes the files from the stash.</td>
+                        </tr>
+                        <tr>
+                            <td>git stash clear</td>
+                            <td>To delete all changes in stash.</td>
+                        </tr>
+                        <tr>
+                            <td>git diff [--options][--][..]</td>
+                            <td>Commit different between two commits for a single file.</td>
+                        </tr>
+                        <tr>
+                            <td>git diff --staged</td>
+                            <td>Different stage.</td>
+                        </tr>
+                        <tr>
+                            <td>git log --since='<span>date</span>'--until='<span>date</span>'</td>
+                            <td>Commits filter by date.</td>
+                        </tr>
+                        <tr>
+                            <td>git diff mybranch..master --myfile.cs</td>
+                            <td>Different between two branches for single file.</td>
+                        </tr>
+                        <tr>
+                            <td>git checkout -- <span>file1/to/restore</span></td>
+                            <td>Reset file to specific commit.</td>
+                        </tr>
+                        <tr>
+                            <td>git show commmit<span>Id:path/to/file</span></td>
+                            <td>Show file changes for specific commit.</td>
+                        </tr>
+                        <tr>
+                            <td>git reset HEAD -- <span>filename</span></td>
+                            <td>Remove file from staging.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+</body>
+</html>
